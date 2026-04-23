@@ -345,9 +345,6 @@ h4 {
   color: var(--text);
 }
 
-.nav-logo-cross {
-  display: none;
-}
 
 .nav-links {
   display: flex;
@@ -455,9 +452,6 @@ h4 {
   gap: var(--sp-2);
 }
 
-.footer-brand-cross {
-  color: var(--gold);
-}
 
 .footer-brand p {
   font-size: var(--text-sm);
@@ -904,11 +898,6 @@ h4 {
   color: var(--white);
 }
 
-.ministry-icon {
-  font-size: 1.5rem;
-  margin-bottom: var(--sp-3);
-  opacity: 0.9;
-}
 
 .ministry-card-content h3 {
   font-family: var(--font-display);
@@ -1583,9 +1572,6 @@ h4 {
   min-width: 80px;
 }
 
-.value-num--emoji {
-  font-size: var(--text-2xl);
-}
 
 .section-item-link {
   color: var(--gold);
@@ -1688,18 +1674,6 @@ textarea.form-control {
   align-items: flex-start;
 }
 
-.contact-detail-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--cream-deep);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
 
 .contact-detail-text h4 {
   font-family: var(--font-body);
