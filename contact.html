@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Faith Community Church</title>
+  <meta name="description" content="Reach out to Faith Community Church. We'd love to hear from you — questions, prayer requests, or just saying hello." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="alternate" hreflang="en" href="contact.html" />
+  <link rel="alternate" hreflang="es" href="es/contact.html" />
+</head>
+<body>
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Faith Community Church home">
+        <span class="nav-logo-cross" aria-hidden="true">✦</span>
+        Faith Community Church
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="lang-switch" aria-label="Language selector">
+        <span class="lang-switch-active">EN</span>
+        <span class="lang-switch-divider" aria-hidden="true">|</span>
+        <a href="es/contact.html" class="lang-switch-option" hreflang="es" lang="es">ES</a>
+      </div>
+      <a href="schedule.html" class="btn btn-primary nav-cta">Join Us Sunday</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ======== PAGE HERO ======== -->
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <span class="page-hero-tag">Contact</span>
+        <h1>We'd love to<br>hear from you.</h1>
+        <p>
+          Whether you have a question, a prayer request, or just want to say hello —
+          our team reads every message and we'll get back to you soon.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======== CONTACT MAIN ======== -->
+    <section class="contact-section section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- FORM -->
+          <div>
+            <span class="eyebrow animate-up">Send a Message</span>
+            <h2 class="heading-lg animate-up" data-delay="1" style="margin-top: var(--sp-3); margin-bottom: var(--sp-8);">How can we<br>help you?</h2>
+
+            <form id="contact-form" class="animate-up" data-delay="2" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" name="first_name" class="form-control" placeholder="Jane" autocomplete="given-name" required />
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" name="last_name" class="form-control" placeholder="Smith" autocomplete="family-name" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com" autocomplete="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number <span style="color: var(--text-muted); font-weight: 400;">(optional)</span></label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 000-0000" autocomplete="tel" />
+              </div>
+
+              <div class="form-group">
+                <label for="reason">How can we help?</label>
+                <select id="reason" name="reason" class="form-control">
+                  <option value="" disabled selected>Select a topic…</option>
+                  <option value="general">General Question</option>
+                  <option value="visit">Planning a Visit</option>
+                  <option value="prayer">Prayer Request</option>
+                  <option value="membership">Church Membership</option>
+                  <option value="ministry">Ministry / Volunteering</option>
+                  <option value="kids">Children's Ministry</option>
+                  <option value="youth">Youth Ministry</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" class="form-control" placeholder="Tell us what's on your heart…" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding-block: 1em;">
+                Send Message
+              </button>
+
+              <p style="font-size: var(--text-xs); color: var(--text-muted); text-align: center; margin-top: var(--sp-4);">
+                We respect your privacy. Your information is never shared.
+              </p>
+            </form>
+          </div>
+
+          <!-- SIDEBAR INFO -->
+          <div class="contact-info animate-up" data-delay="2">
+            <h3>Find us &amp;<br>reach us directly.</h3>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <div class="contact-detail-icon" aria-hidden="true">📍</div>
+                <div class="contact-detail-text">
+                  <h4>Address</h4>
+                  <p>123 Main Street<br>Your City, State 00000</p>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-detail-icon" aria-hidden="true">📞</div>
+                <div class="contact-detail-text">
+                  <h4>Phone</h4>
+                  <p><a href="tel:+15550000000" style="color: var(--navy);">(555) 000-0000</a><br>Monday–Friday, 9 AM–5 PM</p>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-detail-icon" aria-hidden="true">✉</div>
+                <div class="contact-detail-text">
+                  <h4>Email</h4>
+                  <p><a href="mailto:hello@faithcommunitychurch.org" style="color: var(--navy);">hello@faithcommunitychurch.org</a></p>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-detail-icon" aria-hidden="true">🕐</div>
+                <div class="contact-detail-text">
+                  <h4>Sunday Services</h4>
+                  <p>9:00 AM — Traditional<br>11:00 AM — Contemporary</p>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-detail-icon" aria-hidden="true">📱</div>
+                <div class="contact-detail-text">
+                  <h4>Follow Us</h4>
+                  <p>
+                    <a href="#" style="color: var(--navy); display: block;">Facebook</a>
+                    <a href="#" style="color: var(--navy); display: block; margin-top: 4px;">Instagram</a>
+                    <a href="#" style="color: var(--navy); display: block; margin-top: 4px;">YouTube</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-placeholder" style="margin-top: var(--sp-8);" aria-label="Map placeholder">
+              [ Map Embed Here ]
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== FAQ STRIP ======== -->
+    <section class="section section--deep" aria-labelledby="faq-heading">
+      <div class="container">
+        <span class="eyebrow animate-up">Common Questions</span>
+        <h2 class="heading-xl animate-up" data-delay="1" id="faq-heading" style="margin-bottom: var(--sp-10);">
+          Quick answers.
+        </h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--sp-6);">
+          <div class="value-item animate-up" data-delay="1">
+            <h3 style="font-size: var(--text-lg);">What should I wear?</h3>
+            <p>Come as you are — literally. We have no dress code. Some people wear jeans, some wear their Sunday best. You'll fit right in either way.</p>
+          </div>
+
+          <div class="value-item animate-up" data-delay="2">
+            <h3 style="font-size: var(--text-lg);">Is there childcare?</h3>
+            <p>Yes! We offer nursery care and children's programming during both Sunday services. Check in your little ones when you arrive.</p>
+          </div>
+
+          <div class="value-item animate-up" data-delay="2">
+            <h3 style="font-size: var(--text-lg);">How long are services?</h3>
+            <p>Both Sunday services run approximately 75–90 minutes, including worship music and a message from our pastor.</p>
+          </div>
+
+          <div class="value-item animate-up" data-delay="3">
+            <h3 style="font-size: var(--text-lg);">Do I need to register?</h3>
+            <p>Nope — just show up. If you'd like to let us know you're coming so we can personally welcome you, you're welcome to reach out first.</p>
+          </div>
+
+          <div class="value-item animate-up" data-delay="3">
+            <h3 style="font-size: var(--text-lg);">Can I watch online?</h3>
+            <p>Yes! We stream our 11 AM Sunday service live on Facebook and YouTube. Links are on our social media pages.</p>
+          </div>
+
+          <div class="value-item animate-up" data-delay="4">
+            <h3 style="font-size: var(--text-lg);">Is parking available?</h3>
+            <p>We have a free parking lot adjacent to the church building, plus street parking nearby. Accessible spaces are near the entrance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== CTA ======== -->
+    <section class="sunday-cta">
+      <div class="container sunday-cta-inner">
+        <p class="sunday-cta-eyebrow">Still have questions?</p>
+        <h2>We're just a<br><em>message away.</em></h2>
+        <p>We promise — no judgment, no pressure, no obligation. Just a warm welcome and an honest answer.</p>
+        <div class="sunday-cta-actions">
+          <a href="schedule.html" class="btn btn-gold">Plan Your Visit</a>
+          <a href="programs.html" class="btn btn-outline-light">Explore Ministries</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="footer-brand-name">
+            <span class="footer-brand-cross" aria-hidden="true">✦</span>
+            Faith Community Church
+          </p>
+          <p>A place of love, hope, and belonging. Rooted in Scripture, committed to our community.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="schedule.html">Sunday 9:00 AM</a></li>
+            <li><a href="schedule.html">Sunday 11:00 AM</a></li>
+            <li><a href="schedule.html">Wednesday Bible Study</a></li>
+            <li><a href="schedule.html">Friday Youth</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="contact.html">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Faith Community Church. All rights reserved.</p>
+        <p>123 Main Street, Your City, ST 00000 &mdash; <a href="tel:+15550000000" style="color: inherit;">(555) 000-0000</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
