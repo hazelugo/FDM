@@ -1,284 +1,452 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto — Faith Community Church</title>
-  <meta name="description" content="Comunícate con Faith Community Church. Preguntas, peticiones de oración o simplemente un saludo — te respondemos pronto." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="alternate" hreflang="en" href="../contact.html" />
-  <link rel="alternate" hreflang="es" href="contact.html" />
-</head>
-<body>
-
-  <!-- ======== NAVEGACIÓN ======== -->
-  <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="Faith Community Church inicio">
-        <span class="nav-logo-cross" aria-hidden="true">✦</span>
-        Faith Community Church
-      </a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="nav-links" role="list">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Nosotros</a></li>
-        <li><a href="schedule.html">Horario</a></li>
-        <li><a href="programs.html">Programas</a></li>
-        <li><a href="contact.html">Contacto</a></li>
-      </ul>
-      <div class="lang-switch" aria-label="Selector de idioma">
-        <a href="../contact.html" class="lang-switch-option" hreflang="en" lang="en">EN</a>
-        <span class="lang-switch-divider" aria-hidden="true">|</span>
-        <span class="lang-switch-active">ES</span>
-      </div>
-      <a href="schedule.html" class="btn btn-primary nav-cta">Únete el Domingo</a>
-    </div>
-  </nav>
-
-  <main>
-
-    <!-- ======== HERO DE PÁGINA ======== -->
-    <section class="page-hero">
-      <div class="container page-hero-inner">
-        <span class="page-hero-tag">Contacto</span>
-        <h1>Nos encantaría<br>escucharte.</h1>
-        <p>
-          Ya sea que tengas una pregunta, una petición de oración o solo quieras saludar —
-          nuestro equipo lee cada mensaje y te respondemos pronto.
-        </p>
-      </div>
-    </section>
-
-    <!-- ======== CONTACTO PRINCIPAL ======== -->
-    <section class="contact-section section">
-      <div class="container">
-        <div class="contact-grid">
-
-          <!-- FORMULARIO -->
-          <div>
-            <span class="eyebrow animate-up">Envíanos un Mensaje</span>
-            <h2 class="heading-lg animate-up" data-delay="1" style="margin-top: var(--sp-3); margin-bottom: var(--sp-8);">¿En qué podemos<br>ayudarte?</h2>
-
-            <form id="contact-form" class="animate-up" data-delay="2" novalidate>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="first-name">Nombre</label>
-                  <input type="text" id="first-name" name="first_name" class="form-control" placeholder="Ana" autocomplete="given-name" required />
-                </div>
-                <div class="form-group">
-                  <label for="last-name">Apellido</label>
-                  <input type="text" id="last-name" name="last_name" class="form-control" placeholder="García" autocomplete="family-name" required />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="ana@ejemplo.com" autocomplete="email" required />
-              </div>
-
-              <div class="form-group">
-                <label for="phone">Teléfono <span style="color: var(--text-muted); font-weight: 400;">(opcional)</span></label>
-                <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 000-0000" autocomplete="tel" />
-              </div>
-
-              <div class="form-group">
-                <label for="reason">¿Cómo podemos ayudarte?</label>
-                <select id="reason" name="reason" class="form-control">
-                  <option value="" disabled selected>Selecciona un tema…</option>
-                  <option value="general">Pregunta General</option>
-                  <option value="visit">Planificar una Visita</option>
-                  <option value="prayer">Petición de Oración</option>
-                  <option value="membership">Membresía</option>
-                  <option value="ministry">Ministerio / Voluntariado</option>
-                  <option value="kids">Ministerio de Niños</option>
-                  <option value="youth">Ministerio Juvenil</option>
-                  <option value="other">Otro</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="message">Tu Mensaje</label>
-                <textarea id="message" name="message" class="form-control" placeholder="Cuéntanos lo que tienes en el corazón…" required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding-block: 1em;">
-                Enviar Mensaje
-              </button>
-
-              <p style="font-size: var(--text-xs); color: var(--text-muted); text-align: center; margin-top: var(--sp-4);">
-                Respetamos tu privacidad. Tu información nunca se comparte con terceros.
-              </p>
-            </form>
-          </div>
-
-          <!-- INFORMACIÓN DE CONTACTO -->
-          <div class="contact-info animate-up" data-delay="2">
-            <h3>Encuéntranos y<br>comunícate directamente.</h3>
-
-            <div class="contact-details">
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">📍</div>
-                <div class="contact-detail-text">
-                  <h4>Dirección</h4>
-                  <p>123 Main Street<br>Tu Ciudad, Estado 00000</p>
-                </div>
-              </div>
-
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">📞</div>
-                <div class="contact-detail-text">
-                  <h4>Teléfono</h4>
-                  <p><a href="tel:+15550000000" style="color: var(--navy);">(555) 000-0000</a><br>Lunes a Viernes, 9 AM–5 PM</p>
-                </div>
-              </div>
-
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">✉</div>
-                <div class="contact-detail-text">
-                  <h4>Correo</h4>
-                  <p><a href="mailto:hola@faithcommunitychurch.org" style="color: var(--navy);">hola@faithcommunitychurch.org</a></p>
-                </div>
-              </div>
-
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">🕐</div>
-                <div class="contact-detail-text">
-                  <h4>Servicios Dominicales</h4>
-                  <p>9:00 AM — Tradicional<br>11:00 AM — Contemporáneo</p>
-                </div>
-              </div>
-
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">📱</div>
-                <div class="contact-detail-text">
-                  <h4>Síguenos</h4>
-                  <p>
-                    <a href="#" style="color: var(--navy); display: block;">Facebook</a>
-                    <a href="#" style="color: var(--navy); display: block; margin-top: 4px;">Instagram</a>
-                    <a href="#" style="color: var(--navy); display: block; margin-top: 4px;">YouTube</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="map-placeholder" style="margin-top: var(--sp-8);" aria-label="Mapa de ubicación">
-              [ Mapa Aquí ]
-            </div>
-          </div>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto — Fuente de Misericordia</title>
+    <meta
+      name="description"
+      content="Comunícate con Fuente de Misericordia. Preguntas, peticiones de oración o simplemente un saludo — te respondemos pronto."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="alternate" hreflang="en" href="../contact.html" />
+    <link rel="alternate" hreflang="es" href="contact.html" />
+  </head>
+  <body>
+    <!-- ======== NAVEGACIÓN ======== -->
+    <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+      <div class="nav-inner">
+        <a
+          href="index.html"
+          class="nav-logo"
+          aria-label="Fuente de Misericordia inicio"
+        >
+          <span class="nav-logo-cross" aria-hidden="true">✦</span>
+          Fuente de Misericordia
+        </a>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="schedule.html">Horario</a></li>
+          <li><a href="programs.html">Programas</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+        <div class="lang-switch" aria-label="Selector de idioma">
+          <a
+            href="../contact.html"
+            class="lang-switch-option"
+            hreflang="en"
+            lang="en"
+            >EN</a
+          >
+          <span class="lang-switch-divider" aria-hidden="true">|</span>
+          <span class="lang-switch-active">ES</span>
         </div>
+        <a href="schedule.html" class="btn btn-primary nav-cta"
+          >Únete el Domingo</a
+        >
       </div>
-    </section>
+    </nav>
 
-    <!-- ======== PREGUNTAS FRECUENTES ======== -->
-    <section class="section section--deep" aria-labelledby="faq-heading">
-      <div class="container">
-        <span class="eyebrow animate-up">Preguntas Frecuentes</span>
-        <h2 class="heading-xl animate-up" data-delay="1" id="faq-heading" style="margin-bottom: var(--sp-10);">
-          Respuestas rápidas.
-        </h2>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--sp-6);">
-          <div class="value-item animate-up" data-delay="1">
-            <h3 style="font-size: var(--text-lg);">¿Cómo debo vestirme?</h3>
-            <p>Ven como eres — literalmente. No tenemos código de vestimenta. Algunos vienen en jeans, otros en su mejor ropa dominguera. Encajarás perfectamente de cualquier manera.</p>
-          </div>
-
-          <div class="value-item animate-up" data-delay="2">
-            <h3 style="font-size: var(--text-lg);">¿Hay cuidado de niños?</h3>
-            <p>¡Sí! Ofrecemos nursería y programación para niños durante ambos servicios dominicales. Regístralos al llegar.</p>
-          </div>
-
-          <div class="value-item animate-up" data-delay="2">
-            <h3 style="font-size: var(--text-lg);">¿Cuánto dura el servicio?</h3>
-            <p>Ambos servicios dominicales duran aproximadamente 75–90 minutos, incluyendo música de alabanza y un mensaje del pastor.</p>
-          </div>
-
-          <div class="value-item animate-up" data-delay="3">
-            <h3 style="font-size: var(--text-lg);">¿Necesito registrarme?</h3>
-            <p>No — solo ven. Si quieres avisarnos para que podamos recibirte personalmente, ¡puedes escribirnos antes con mucho gusto!</p>
-          </div>
-
-          <div class="value-item animate-up" data-delay="3">
-            <h3 style="font-size: var(--text-lg);">¿Puedo verlo en línea?</h3>
-            <p>¡Sí! Transmitimos en vivo el servicio de las 11 AM por Facebook y YouTube. Los enlaces están en nuestras redes sociales.</p>
-          </div>
-
-          <div class="value-item animate-up" data-delay="4">
-            <h3 style="font-size: var(--text-lg);">¿Hay estacionamiento?</h3>
-            <p>Contamos con un estacionamiento gratuito junto al edificio y estacionamiento en la calle. Los espacios accesibles están cerca de la entrada principal.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======== CTA ======== -->
-    <section class="sunday-cta">
-      <div class="container sunday-cta-inner">
-        <p class="sunday-cta-eyebrow">¿Aún tienes preguntas?</p>
-        <h2>Estamos a solo un<br><em>mensaje de distancia.</em></h2>
-        <p>Te lo prometemos — sin juicios, sin presión, sin compromisos. Solo una bienvenida cálida y una respuesta honesta.</p>
-        <div class="sunday-cta-actions">
-          <a href="schedule.html" class="btn btn-gold">Planifica Tu Visita</a>
-          <a href="programs.html" class="btn btn-outline-light">Explorar Ministerios</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ======== PIE DE PÁGINA ======== -->
-  <footer class="site-footer" aria-label="Pie de página">
-    <div class="footer-inner">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <p class="footer-brand-name">
-            <span class="footer-brand-cross" aria-hidden="true">✦</span>
-            Faith Community Church
+    <main>
+      <!-- ======== HERO DE PÁGINA ======== -->
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <span class="page-hero-tag">Contacto</span>
+          <h1>Nos encantaría<br />escucharte.</h1>
+          <p>
+            Ya sea que tengas una pregunta, una petición de oración o solo
+            quieras saludar — nuestro equipo lee cada mensaje y te respondemos
+            pronto.
           </p>
-          <p>Un lugar de amor, esperanza y pertenencia. Arraigados en la Biblia, comprometidos con nuestra comunidad.</p>
         </div>
-        <div class="footer-col">
-          <h4>Páginas</h4>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="about.html">Nosotros</a></li>
-            <li><a href="schedule.html">Horario</a></li>
-            <li><a href="programs.html">Programas</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Servicios</h4>
-          <ul>
-            <li><a href="schedule.html">Domingo 9:00 AM</a></li>
-            <li><a href="schedule.html">Domingo 11:00 AM</a></li>
-            <li><a href="schedule.html">Estudio Bíblico Miércoles</a></li>
-            <li><a href="schedule.html">Jóvenes Viernes</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Conéctate</h4>
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">YouTube</a></li>
-            <li><a href="contact.html">Envíanos un Mensaje</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Faith Community Church. Todos los derechos reservados.</p>
-        <p>123 Main Street, Tu Ciudad, Estado 00000 &mdash; <a href="tel:+15550000000" style="color: inherit;">(555) 000-0000</a></p>
-      </div>
-    </div>
-  </footer>
+      </section>
 
-  <script src="../js/main.js"></script>
-</body>
+      <!-- ======== CONTACTO PRINCIPAL ======== -->
+      <section class="contact-section section">
+        <div class="container">
+          <div class="contact-grid">
+            <!-- FORMULARIO -->
+            <div>
+              <span class="eyebrow animate-up">Envíanos un Mensaje</span>
+              <h2
+                class="heading-lg animate-up"
+                data-delay="1"
+                style="margin-top: var(--sp-3); margin-bottom: var(--sp-8)"
+              >
+                ¿En qué podemos<br />ayudarte?
+              </h2>
+
+              <form
+                id="contact-form"
+                class="animate-up"
+                data-delay="2"
+                novalidate
+              >
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="first-name">Nombre</label>
+                    <input
+                      type="text"
+                      id="first-name"
+                      name="first_name"
+                      class="form-control"
+                      placeholder="Ana"
+                      autocomplete="given-name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Apellido</label>
+                    <input
+                      type="text"
+                      id="last-name"
+                      name="last_name"
+                      class="form-control"
+                      placeholder="García"
+                      autocomplete="family-name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Correo Electrónico</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="ana@ejemplo.com"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone"
+                    >Teléfono
+                    <span style="color: var(--text-muted); font-weight: 400"
+                      >(opcional)</span
+                    ></label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="form-control"
+                    placeholder="(555) 000-0000"
+                    autocomplete="tel"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="reason">¿Cómo podemos ayudarte?</label>
+                  <select id="reason" name="reason" class="form-control">
+                    <option value="" disabled selected>
+                      Selecciona un tema…
+                    </option>
+                    <option value="general">Pregunta General</option>
+                    <option value="visit">Planificar una Visita</option>
+                    <option value="prayer">Petición de Oración</option>
+                    <option value="membership">Membresía</option>
+                    <option value="ministry">Ministerio / Voluntariado</option>
+                    <option value="kids">Ministerio de Niños</option>
+                    <option value="youth">Ministerio Juvenil</option>
+                    <option value="other">Otro</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Tu Mensaje</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-control"
+                    placeholder="Cuéntanos lo que tienes en el corazón…"
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  style="
+                    width: 100%;
+                    justify-content: center;
+                    padding-block: 1em;
+                  "
+                >
+                  Enviar Mensaje
+                </button>
+
+                <p
+                  style="
+                    font-size: var(--text-xs);
+                    color: var(--text-muted);
+                    text-align: center;
+                    margin-top: var(--sp-4);
+                  "
+                >
+                  Respetamos tu privacidad. Tu información nunca se comparte con
+                  terceros.
+                </p>
+              </form>
+            </div>
+
+            <!-- INFORMACIÓN DE CONTACTO -->
+            <div class="contact-info animate-up" data-delay="2">
+              <h3>Encuéntranos y<br />comunícate directamente.</h3>
+
+              <div class="contact-details">
+                <div class="contact-detail">
+                  <div class="contact-detail-icon" aria-hidden="true">📍</div>
+                  <div class="contact-detail-text">
+                    <h4>Dirección</h4>
+                    <p>123 Main Street<br />Tu Ciudad, Estado 00000</p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon" aria-hidden="true">📞</div>
+                  <div class="contact-detail-text">
+                    <h4>Teléfono</h4>
+                    <p>
+                      <a href="tel:+15550000000" style="color: var(--navy)"
+                        >(555) 000-0000</a
+                      ><br />Lunes a Viernes, 9 AM–5 PM
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon" aria-hidden="true">✉</div>
+                  <div class="contact-detail-text">
+                    <h4>Correo</h4>
+                    <p>
+                      <a
+                        href="mailto:hola@faithcommunitychurch.org"
+                        style="color: var(--navy)"
+                        >hola@faithcommunitychurch.org</a
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon" aria-hidden="true">🕐</div>
+                  <div class="contact-detail-text">
+                    <h4>Servicios Dominicales</h4>
+                    <p>9:00 AM — Tradicional<br />11:00 AM — Contemporáneo</p>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon" aria-hidden="true">📱</div>
+                  <div class="contact-detail-text">
+                    <h4>Síguenos</h4>
+                    <p>
+                      <a href="#" style="color: var(--navy); display: block"
+                        >Facebook</a
+                      >
+                      <a
+                        href="#"
+                        style="
+                          color: var(--navy);
+                          display: block;
+                          margin-top: 4px;
+                        "
+                        >Instagram</a
+                      >
+                      <a
+                        href="#"
+                        style="
+                          color: var(--navy);
+                          display: block;
+                          margin-top: 4px;
+                        "
+                        >YouTube</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="map-placeholder"
+                style="margin-top: var(--sp-8)"
+                aria-label="Mapa de ubicación"
+              >
+                [ Mapa Aquí ]
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== PREGUNTAS FRECUENTES ======== -->
+      <section class="section section--deep" aria-labelledby="faq-heading">
+        <div class="container">
+          <span class="eyebrow animate-up">Preguntas Frecuentes</span>
+          <h2
+            class="heading-xl animate-up"
+            data-delay="1"
+            id="faq-heading"
+            style="margin-bottom: var(--sp-10)"
+          >
+            Respuestas rápidas.
+          </h2>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+              gap: var(--sp-6);
+            "
+          >
+            <div class="value-item animate-up" data-delay="1">
+              <h3 style="font-size: var(--text-lg)">¿Cómo debo vestirme?</h3>
+              <p>
+                Ven como eres — literalmente. No tenemos código de vestimenta.
+                Algunos vienen en jeans, otros en su mejor ropa dominguera.
+                Encajarás perfectamente de cualquier manera.
+              </p>
+            </div>
+
+            <div class="value-item animate-up" data-delay="2">
+              <h3 style="font-size: var(--text-lg)">¿Hay cuidado de niños?</h3>
+              <p>
+                ¡Sí! Ofrecemos nursería y programación para niños durante ambos
+                servicios dominicales. Regístralos al llegar.
+              </p>
+            </div>
+
+            <div class="value-item animate-up" data-delay="2">
+              <h3 style="font-size: var(--text-lg)">
+                ¿Cuánto dura el servicio?
+              </h3>
+              <p>
+                Ambos servicios dominicales duran aproximadamente 75–90 minutos,
+                incluyendo música de alabanza y un mensaje del pastor.
+              </p>
+            </div>
+
+            <div class="value-item animate-up" data-delay="3">
+              <h3 style="font-size: var(--text-lg)">¿Necesito registrarme?</h3>
+              <p>
+                No — solo ven. Si quieres avisarnos para que podamos recibirte
+                personalmente, ¡puedes escribirnos antes con mucho gusto!
+              </p>
+            </div>
+
+            <div class="value-item animate-up" data-delay="3">
+              <h3 style="font-size: var(--text-lg)">¿Puedo verlo en línea?</h3>
+              <p>
+                ¡Sí! Transmitimos en vivo el servicio de las 11 AM por Facebook
+                y YouTube. Los enlaces están en nuestras redes sociales.
+              </p>
+            </div>
+
+            <div class="value-item animate-up" data-delay="4">
+              <h3 style="font-size: var(--text-lg)">¿Hay estacionamiento?</h3>
+              <p>
+                Contamos con un estacionamiento gratuito junto al edificio y
+                estacionamiento en la calle. Los espacios accesibles están cerca
+                de la entrada principal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== CTA ======== -->
+      <section class="sunday-cta">
+        <div class="container sunday-cta-inner">
+          <p class="sunday-cta-eyebrow">¿Aún tienes preguntas?</p>
+          <h2>Estamos a solo un<br /><em>mensaje de distancia.</em></h2>
+          <p>
+            Te lo prometemos — sin juicios, sin presión, sin compromisos. Solo
+            una bienvenida cálida y una respuesta honesta.
+          </p>
+          <div class="sunday-cta-actions">
+            <a href="schedule.html" class="btn btn-gold">Planifica Tu Visita</a>
+            <a href="programs.html" class="btn btn-outline-light"
+              >Explorar Ministerios</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ======== PIE DE PÁGINA ======== -->
+    <footer class="site-footer" aria-label="Pie de página">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <p class="footer-brand-name">
+              <span class="footer-brand-cross" aria-hidden="true">✦</span>
+              Fuente de Misericordia
+            </p>
+            <p>
+              Un lugar de amor, esperanza y pertenencia. Arraigados en la
+              Biblia, comprometidos con nuestra comunidad.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Páginas</h4>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="about.html">Nosotros</a></li>
+              <li><a href="schedule.html">Horario</a></li>
+              <li><a href="programs.html">Programas</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Servicios</h4>
+            <ul>
+              <li><a href="schedule.html">Domingo 9:00 AM</a></li>
+              <li><a href="schedule.html">Domingo 11:00 AM</a></li>
+              <li><a href="schedule.html">Estudio Bíblico Miércoles</a></li>
+              <li><a href="schedule.html">Jóvenes Viernes</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Conéctate</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">YouTube</a></li>
+              <li><a href="contact.html">Envíanos un Mensaje</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Fuente de Misericordia. Todos los derechos reservados.
+          </p>
+          <p>
+            123 Main Street, Tu Ciudad, Estado 00000 &mdash;
+            <a href="tel:+15550000000" style="color: inherit">(555) 000-0000</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
 </html>

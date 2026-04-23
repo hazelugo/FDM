@@ -1,312 +1,417 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Horario — Faith Community Church</title>
-  <meta name="description" content="Consulta nuestro horario semanal de servicios, estudios bíblicos, programas juveniles y próximos eventos en Faith Community Church." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="alternate" hreflang="en" href="../schedule.html" />
-  <link rel="alternate" hreflang="es" href="schedule.html" />
-</head>
-<body>
-
-  <!-- ======== NAVEGACIÓN ======== -->
-  <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="Faith Community Church inicio">
-        <span class="nav-logo-cross" aria-hidden="true">✦</span>
-        Faith Community Church
-      </a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="nav-links" role="list">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Nosotros</a></li>
-        <li><a href="schedule.html">Horario</a></li>
-        <li><a href="programs.html">Programas</a></li>
-        <li><a href="contact.html">Contacto</a></li>
-      </ul>
-      <div class="lang-switch" aria-label="Selector de idioma">
-        <a href="../schedule.html" class="lang-switch-option" hreflang="en" lang="en">EN</a>
-        <span class="lang-switch-divider" aria-hidden="true">|</span>
-        <span class="lang-switch-active">ES</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horario — Fuente de Misericordia</title>
+    <meta
+      name="description"
+      content="Consulta nuestro horario semanal de servicios, estudios bíblicos, programas juveniles y próximos eventos en Fuente de Misericordia."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="alternate" hreflang="en" href="../schedule.html" />
+    <link rel="alternate" hreflang="es" href="schedule.html" />
+  </head>
+  <body>
+    <!-- ======== NAVEGACIÓN ======== -->
+    <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+      <div class="nav-inner">
+        <a
+          href="index.html"
+          class="nav-logo"
+          aria-label="Fuente de Misericordia inicio"
+        >
+          <span class="nav-logo-cross" aria-hidden="true">✦</span>
+          Fuente de Misericordia
+        </a>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="schedule.html">Horario</a></li>
+          <li><a href="programs.html">Programas</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+        <div class="lang-switch" aria-label="Selector de idioma">
+          <a
+            href="../schedule.html"
+            class="lang-switch-option"
+            hreflang="en"
+            lang="en"
+            >EN</a
+          >
+          <span class="lang-switch-divider" aria-hidden="true">|</span>
+          <span class="lang-switch-active">ES</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary nav-cta"
+          >Haz una Pregunta</a
+        >
       </div>
-      <a href="contact.html" class="btn btn-primary nav-cta">Haz una Pregunta</a>
-    </div>
-  </nav>
+    </nav>
 
-  <main>
-
-    <!-- ======== HERO DE PÁGINA ======== -->
-    <section class="page-hero">
-      <div class="container page-hero-inner">
-        <span class="page-hero-tag">Horario y Servicios</span>
-        <h1>Encuentra tu<br>ritmo con nosotros.</h1>
-        <p>
-          Nos reunimos durante toda la semana — no solo los domingos.
-          Encuentra un servicio, estudio o programa que encaje en tu vida y horario.
-        </p>
-      </div>
-    </section>
-
-    <!-- ======== HORARIO ======== -->
-    <section class="schedule-section section">
-      <div class="container">
-
-        <!-- Banner primera visita -->
-        <div style="
-          background: var(--gold-pale);
-          border: 1.5px solid oklch(80% 0.08 72);
-          border-radius: var(--radius-lg);
-          padding: var(--sp-6) var(--sp-8);
-          margin-bottom: var(--sp-12);
-          display: flex;
-          align-items: center;
-          gap: var(--sp-6);
-          flex-wrap: wrap;
-        " class="animate-up">
-          <div style="flex: 1; min-width: 200px;">
-            <p style="font-weight: 500; color: var(--navy); margin-bottom: var(--sp-1);">¿Es tu primera visita?</p>
-            <p style="font-size: var(--text-sm); color: var(--text-muted);">Nos encantaría recibirte. Llega unos minutos antes y nuestro Equipo de Bienvenida estará listo para saludarte.</p>
-          </div>
-          <a href="contact.html" class="btn btn-gold" style="flex-shrink: 0;">Avísanos que Vienes</a>
+    <main>
+      <!-- ======== HERO DE PÁGINA ======== -->
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <span class="page-hero-tag">Horario y Servicios</span>
+          <h1>Encuentra tu<br />ritmo con nosotros.</h1>
+          <p>
+            Nos reunimos durante toda la semana — no solo los domingos.
+            Encuentra un servicio, estudio o programa que encaje en tu vida y
+            horario.
+          </p>
         </div>
+      </section>
 
-        <!-- DOMINGO -->
-        <div class="schedule-block animate-up" data-delay="1">
-          <div class="schedule-block-header">
-            <h2 class="schedule-block-day">Domingo</h2>
-            <span class="schedule-block-note label">Nuestro día principal de adoración</span>
+      <!-- ======== HORARIO ======== -->
+      <section class="schedule-section section">
+        <div class="container">
+          <!-- Banner primera visita -->
+          <div
+            style="
+              background: var(--gold-pale);
+              border: 1.5px solid oklch(80% 0.08 72);
+              border-radius: var(--radius-lg);
+              padding: var(--sp-6) var(--sp-8);
+              margin-bottom: var(--sp-12);
+              display: flex;
+              align-items: center;
+              gap: var(--sp-6);
+              flex-wrap: wrap;
+            "
+            class="animate-up"
+          >
+            <div style="flex: 1; min-width: 200px">
+              <p
+                style="
+                  font-weight: 500;
+                  color: var(--navy);
+                  margin-bottom: var(--sp-1);
+                "
+              >
+                ¿Es tu primera visita?
+              </p>
+              <p style="font-size: var(--text-sm); color: var(--text-muted)">
+                Nos encantaría recibirte. Llega unos minutos antes y nuestro
+                Equipo de Bienvenida estará listo para saludarte.
+              </p>
+            </div>
+            <a href="contact.html" class="btn btn-gold" style="flex-shrink: 0"
+              >Avísanos que Vienes</a
+            >
           </div>
-          <div class="schedule-events">
-            <article class="schedule-event featured">
-              <time class="event-time" datetime="09:00">9:00 AM</time>
-              <div>
-                <p class="event-name">Servicio de Adoración Matutino</p>
-                <p class="event-desc">Formato tradicional con himnos, Escritura y un mensaje de nuestro pastor. Todas las edades bienvenidas.</p>
-              </div>
-              <span class="event-tag">Todas las Edades</span>
-            </article>
 
-            <article class="schedule-event">
-              <time class="event-time" datetime="10:15">10:15 AM</time>
-              <div>
-                <p class="event-name">Escuela Dominical e Iglesia de Niños</p>
-                <p class="event-desc">Enseñanza bíblica apropiada para cada edad, para niños hasta 5.º grado, entre los dos servicios.</p>
-              </div>
-              <span class="event-tag">Niños</span>
-            </article>
-
-            <article class="schedule-event featured">
-              <time class="event-time" datetime="11:00">11:00 AM</time>
-              <div>
-                <p class="event-name">Servicio de Adoración Contemporáneo</p>
-                <p class="event-desc">Música moderna, enseñanza dinámica y un ambiente relajado. Perfecto para familias y visitantes nuevos.</p>
-              </div>
-              <span class="event-tag">Todas las Edades</span>
-            </article>
-
-            <article class="schedule-event">
-              <time class="event-time" datetime="12:30">12:30 PM</time>
-              <div>
-                <p class="event-name">Confraternidad y Café</p>
-                <p class="event-desc">Únete después del servicio de las 11 AM para tomar algo y conectar con la comunidad en el salón de confraternidad.</p>
-              </div>
-              <span class="event-tag">Comunidad</span>
-            </article>
-          </div>
-        </div>
-
-        <!-- MIÉRCOLES -->
-        <div class="schedule-block animate-up" data-delay="2">
-          <div class="schedule-block-header">
-            <h2 class="schedule-block-day">Miércoles</h2>
-            <span class="schedule-block-note label">Renovación a mitad de semana</span>
-          </div>
-          <div class="schedule-events">
-            <article class="schedule-event">
-              <time class="event-time" datetime="18:30">6:30 PM</time>
-              <div>
-                <p class="event-name">Programación para Niños (AWANA)</p>
-                <p class="event-desc">Memorización de versículos, juegos y actividades de formación en la fe para niños de 3 años hasta 5.º grado.</p>
-              </div>
-              <span class="event-tag">Niños</span>
-            </article>
-
-            <article class="schedule-event featured">
-              <time class="event-time" datetime="19:00">7:00 PM</time>
-              <div>
-                <p class="event-name">Estudio Bíblico para Adultos</p>
-                <p class="event-desc">Un estudio más profundo de la Biblia con diálogo, preguntas bienvenidas y oración comunitaria. Todos los niveles.</p>
-              </div>
-              <span class="event-tag">Adultos</span>
-            </article>
-          </div>
-        </div>
-
-        <!-- VIERNES -->
-        <div class="schedule-block animate-up" data-delay="3">
-          <div class="schedule-block-header">
-            <h2 class="schedule-block-day">Viernes</h2>
-            <span class="schedule-block-note label">Noche de jóvenes</span>
-          </div>
-          <div class="schedule-events">
-            <article class="schedule-event featured">
-              <time class="event-time" datetime="19:00">7:00 PM</time>
-              <div>
-                <p class="event-name">Grupo de Jóvenes (13–18 años)</p>
-                <p class="event-desc">Juegos, alabanza, conversaciones reales y comunidad para estudiantes de secundaria y preparatoria. Trae a un amigo.</p>
-              </div>
-              <span class="event-tag">Jóvenes</span>
-            </article>
-          </div>
-        </div>
-
-        <!-- SEMANAL -->
-        <div class="schedule-block animate-up" data-delay="4">
-          <div class="schedule-block-header">
-            <h2 class="schedule-block-day">Semanal</h2>
-            <span class="schedule-block-note label">Grupos pequeños y programas continuos</span>
-          </div>
-          <div class="schedule-events">
-            <article class="schedule-event">
-              <time class="event-time">Variable</time>
-              <div>
-                <p class="event-name">Grupos Pequeños</p>
-                <p class="event-desc">Grupos de comunidad reuniéndose en hogares durante toda la semana. Contáctanos para encontrar uno cerca de ti.</p>
-              </div>
-              <span class="event-tag">Comunidad</span>
-            </article>
-
-            <article class="schedule-event">
-              <time class="event-time">Variable</time>
-              <div>
-                <p class="event-name">Estudio Bíblico de Mujeres</p>
-                <p class="event-desc">Una reunión mensual para mujeres de todas las edades. Pregúntanos el horario actual.</p>
-              </div>
-              <span class="event-tag">Mujeres</span>
-            </article>
-
-            <article class="schedule-event">
-              <time class="event-time">Variable</time>
-              <div>
-                <p class="event-name">Confraternidad de Hombres</p>
-                <p class="event-desc">Desayuno y estudio mensual para los hombres de la congregación. Todos son bienvenidos.</p>
-              </div>
-              <span class="event-tag">Hombres</span>
-            </article>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ======== UBICACIÓN ======== -->
-    <section class="section section--deep" aria-labelledby="ubicacion-heading">
-      <div class="container">
-        <span class="eyebrow">Cómo Llegar</span>
-        <h2 class="heading-xl animate-up" id="ubicacion-heading">Fácil de encontrar.</h2>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-12); align-items: start; margin-top: var(--sp-10);">
-          <div class="animate-up" data-delay="1">
-            <div class="contact-details">
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">📍</div>
-                <div class="contact-detail-text">
-                  <h4>Dirección</h4>
-                  <p>123 Main Street<br>Tu Ciudad, Estado 00000</p>
+          <!-- DOMINGO -->
+          <div class="schedule-block animate-up" data-delay="1">
+            <div class="schedule-block-header">
+              <h2 class="schedule-block-day">Domingo</h2>
+              <span class="schedule-block-note label"
+                >Nuestro día principal de adoración</span
+              >
+            </div>
+            <div class="schedule-events">
+              <article class="schedule-event featured">
+                <time class="event-time" datetime="09:00">9:00 AM</time>
+                <div>
+                  <p class="event-name">Servicio de Adoración Matutino</p>
+                  <p class="event-desc">
+                    Formato tradicional con himnos, Escritura y un mensaje de
+                    nuestro pastor. Todas las edades bienvenidas.
+                  </p>
                 </div>
-              </div>
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">🅿</div>
-                <div class="contact-detail-text">
-                  <h4>Estacionamiento</h4>
-                  <p>Estacionamiento gratuito disponible en nuestro lote y en las calles cercanas. Espacios accesibles cerca de la entrada principal.</p>
+                <span class="event-tag">Todas las Edades</span>
+              </article>
+
+              <article class="schedule-event">
+                <time class="event-time" datetime="10:15">10:15 AM</time>
+                <div>
+                  <p class="event-name">Escuela Dominical e Iglesia de Niños</p>
+                  <p class="event-desc">
+                    Enseñanza bíblica apropiada para cada edad, para niños hasta
+                    5.º grado, entre los dos servicios.
+                  </p>
                 </div>
-              </div>
-              <div class="contact-detail">
-                <div class="contact-detail-icon" aria-hidden="true">♿</div>
-                <div class="contact-detail-text">
-                  <h4>Accesibilidad</h4>
-                  <p>Nuestro edificio es completamente accesible. Dispositivos de asistencia auditiva disponibles en la mesa de bienvenida.</p>
+                <span class="event-tag">Niños</span>
+              </article>
+
+              <article class="schedule-event featured">
+                <time class="event-time" datetime="11:00">11:00 AM</time>
+                <div>
+                  <p class="event-name">Servicio de Adoración Contemporáneo</p>
+                  <p class="event-desc">
+                    Música moderna, enseñanza dinámica y un ambiente relajado.
+                    Perfecto para familias y visitantes nuevos.
+                  </p>
+                </div>
+                <span class="event-tag">Todas las Edades</span>
+              </article>
+
+              <article class="schedule-event">
+                <time class="event-time" datetime="12:30">12:30 PM</time>
+                <div>
+                  <p class="event-name">Confraternidad y Café</p>
+                  <p class="event-desc">
+                    Únete después del servicio de las 11 AM para tomar algo y
+                    conectar con la comunidad en el salón de confraternidad.
+                  </p>
+                </div>
+                <span class="event-tag">Comunidad</span>
+              </article>
+            </div>
+          </div>
+
+          <!-- MIÉRCOLES -->
+          <div class="schedule-block animate-up" data-delay="2">
+            <div class="schedule-block-header">
+              <h2 class="schedule-block-day">Miércoles</h2>
+              <span class="schedule-block-note label"
+                >Renovación a mitad de semana</span
+              >
+            </div>
+            <div class="schedule-events">
+              <article class="schedule-event">
+                <time class="event-time" datetime="18:30">6:30 PM</time>
+                <div>
+                  <p class="event-name">Programación para Niños (AWANA)</p>
+                  <p class="event-desc">
+                    Memorización de versículos, juegos y actividades de
+                    formación en la fe para niños de 3 años hasta 5.º grado.
+                  </p>
+                </div>
+                <span class="event-tag">Niños</span>
+              </article>
+
+              <article class="schedule-event featured">
+                <time class="event-time" datetime="19:00">7:00 PM</time>
+                <div>
+                  <p class="event-name">Estudio Bíblico para Adultos</p>
+                  <p class="event-desc">
+                    Un estudio más profundo de la Biblia con diálogo, preguntas
+                    bienvenidas y oración comunitaria. Todos los niveles.
+                  </p>
+                </div>
+                <span class="event-tag">Adultos</span>
+              </article>
+            </div>
+          </div>
+
+          <!-- VIERNES -->
+          <div class="schedule-block animate-up" data-delay="3">
+            <div class="schedule-block-header">
+              <h2 class="schedule-block-day">Viernes</h2>
+              <span class="schedule-block-note label">Noche de jóvenes</span>
+            </div>
+            <div class="schedule-events">
+              <article class="schedule-event featured">
+                <time class="event-time" datetime="19:00">7:00 PM</time>
+                <div>
+                  <p class="event-name">Grupo de Jóvenes (13–18 años)</p>
+                  <p class="event-desc">
+                    Juegos, alabanza, conversaciones reales y comunidad para
+                    estudiantes de secundaria y preparatoria. Trae a un amigo.
+                  </p>
+                </div>
+                <span class="event-tag">Jóvenes</span>
+              </article>
+            </div>
+          </div>
+
+          <!-- SEMANAL -->
+          <div class="schedule-block animate-up" data-delay="4">
+            <div class="schedule-block-header">
+              <h2 class="schedule-block-day">Semanal</h2>
+              <span class="schedule-block-note label"
+                >Grupos pequeños y programas continuos</span
+              >
+            </div>
+            <div class="schedule-events">
+              <article class="schedule-event">
+                <time class="event-time">Variable</time>
+                <div>
+                  <p class="event-name">Grupos Pequeños</p>
+                  <p class="event-desc">
+                    Grupos de comunidad reuniéndose en hogares durante toda la
+                    semana. Contáctanos para encontrar uno cerca de ti.
+                  </p>
+                </div>
+                <span class="event-tag">Comunidad</span>
+              </article>
+
+              <article class="schedule-event">
+                <time class="event-time">Variable</time>
+                <div>
+                  <p class="event-name">Estudio Bíblico de Mujeres</p>
+                  <p class="event-desc">
+                    Una reunión mensual para mujeres de todas las edades.
+                    Pregúntanos el horario actual.
+                  </p>
+                </div>
+                <span class="event-tag">Mujeres</span>
+              </article>
+
+              <article class="schedule-event">
+                <time class="event-time">Variable</time>
+                <div>
+                  <p class="event-name">Confraternidad de Hombres</p>
+                  <p class="event-desc">
+                    Desayuno y estudio mensual para los hombres de la
+                    congregación. Todos son bienvenidos.
+                  </p>
+                </div>
+                <span class="event-tag">Hombres</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== UBICACIÓN ======== -->
+      <section
+        class="section section--deep"
+        aria-labelledby="ubicacion-heading"
+      >
+        <div class="container">
+          <span class="eyebrow">Cómo Llegar</span>
+          <h2 class="heading-xl animate-up" id="ubicacion-heading">
+            Fácil de encontrar.
+          </h2>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: var(--sp-12);
+              align-items: start;
+              margin-top: var(--sp-10);
+            "
+          >
+            <div class="animate-up" data-delay="1">
+              <div class="contact-details">
+                <div class="contact-detail">
+                  <div class="contact-detail-icon" aria-hidden="true">📍</div>
+                  <div class="contact-detail-text">
+                    <h4>Dirección</h4>
+                    <p>123 Main Street<br />Tu Ciudad, Estado 00000</p>
+                  </div>
+                </div>
+                <div class="contact-detail">
+                  <div class="contact-detail-icon" aria-hidden="true">🅿</div>
+                  <div class="contact-detail-text">
+                    <h4>Estacionamiento</h4>
+                    <p>
+                      Estacionamiento gratuito disponible en nuestro lote y en
+                      las calles cercanas. Espacios accesibles cerca de la
+                      entrada principal.
+                    </p>
+                  </div>
+                </div>
+                <div class="contact-detail">
+                  <div class="contact-detail-icon" aria-hidden="true">♿</div>
+                  <div class="contact-detail-text">
+                    <h4>Accesibilidad</h4>
+                    <p>
+                      Nuestro edificio es completamente accesible. Dispositivos
+                      de asistencia auditiva disponibles en la mesa de
+                      bienvenida.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="map-placeholder animate-fade" data-delay="2">
-            [ Mapa Aquí ]
+            <div class="map-placeholder animate-fade" data-delay="2">
+              [ Mapa Aquí ]
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ======== CTA ======== -->
-    <section class="sunday-cta">
-      <div class="container sunday-cta-inner">
-        <p class="sunday-cta-eyebrow">Te estamos esperando</p>
-        <h2>Nos vemos este <em>domingo.</em></h2>
-        <p>No se requiere experiencia previa. Solo ven — nosotros hacemos el resto.</p>
-        <div class="sunday-cta-actions">
-          <a href="contact.html" class="btn btn-gold">Contáctanos</a>
-          <a href="programs.html" class="btn btn-outline-light">Explorar Ministerios</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ======== PIE DE PÁGINA ======== -->
-  <footer class="site-footer" aria-label="Pie de página">
-    <div class="footer-inner">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <p class="footer-brand-name">
-            <span class="footer-brand-cross" aria-hidden="true">✦</span>
-            Faith Community Church
+      <!-- ======== CTA ======== -->
+      <section class="sunday-cta">
+        <div class="container sunday-cta-inner">
+          <p class="sunday-cta-eyebrow">Te estamos esperando</p>
+          <h2>Nos vemos este <em>domingo.</em></h2>
+          <p>
+            No se requiere experiencia previa. Solo ven — nosotros hacemos el
+            resto.
           </p>
-          <p>Un lugar de amor, esperanza y pertenencia. Arraigados en la Biblia, comprometidos con nuestra comunidad.</p>
+          <div class="sunday-cta-actions">
+            <a href="contact.html" class="btn btn-gold">Contáctanos</a>
+            <a href="programs.html" class="btn btn-outline-light"
+              >Explorar Ministerios</a
+            >
+          </div>
         </div>
-        <div class="footer-col">
-          <h4>Páginas</h4>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="about.html">Nosotros</a></li>
-            <li><a href="schedule.html">Horario</a></li>
-            <li><a href="programs.html">Programas</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Servicios</h4>
-          <ul>
-            <li><a href="schedule.html">Domingo 9:00 AM</a></li>
-            <li><a href="schedule.html">Domingo 11:00 AM</a></li>
-            <li><a href="schedule.html">Estudio Bíblico Miércoles</a></li>
-            <li><a href="schedule.html">Jóvenes Viernes</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Conéctate</h4>
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">YouTube</a></li>
-            <li><a href="contact.html">Envíanos un Mensaje</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Faith Community Church. Todos los derechos reservados.</p>
-        <p>123 Main Street, Tu Ciudad, Estado 00000 &mdash; <a href="tel:+15550000000" style="color: inherit;">(555) 000-0000</a></p>
-      </div>
-    </div>
-  </footer>
+      </section>
+    </main>
 
-  <script src="../js/main.js"></script>
-</body>
+    <!-- ======== PIE DE PÁGINA ======== -->
+    <footer class="site-footer" aria-label="Pie de página">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <p class="footer-brand-name">
+              <span class="footer-brand-cross" aria-hidden="true">✦</span>
+              Fuente de Misericordia
+            </p>
+            <p>
+              Un lugar de amor, esperanza y pertenencia. Arraigados en la
+              Biblia, comprometidos con nuestra comunidad.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Páginas</h4>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="about.html">Nosotros</a></li>
+              <li><a href="schedule.html">Horario</a></li>
+              <li><a href="programs.html">Programas</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Servicios</h4>
+            <ul>
+              <li><a href="schedule.html">Domingo 9:00 AM</a></li>
+              <li><a href="schedule.html">Domingo 11:00 AM</a></li>
+              <li><a href="schedule.html">Estudio Bíblico Miércoles</a></li>
+              <li><a href="schedule.html">Jóvenes Viernes</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Conéctate</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">YouTube</a></li>
+              <li><a href="contact.html">Envíanos un Mensaje</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Fuente de Misericordia. Todos los derechos reservados.
+          </p>
+          <p>
+            123 Main Street, Tu Ciudad, Estado 00000 &mdash;
+            <a href="tel:+15550000000" style="color: inherit">(555) 000-0000</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
 </html>
