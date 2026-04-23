@@ -1766,7 +1766,7 @@ textarea.form-control {
 /* =========================================
    ANIMATIONS
    ========================================= */
-.animate-up {
+.js .animate-up {
   opacity: 0;
   transform: translateY(28px);
   transition:
@@ -1779,7 +1779,7 @@ textarea.form-control {
   transform: translateY(0);
 }
 
-.animate-fade {
+.js .animate-fade {
   opacity: 0;
   transition: opacity 0.6s var(--ease-out);
 }
@@ -1803,8 +1803,8 @@ textarea.form-control {
   transition-delay: 0.5s;
 }
 
-/* Hero entrance */
-.hero-inner {
+/* Hero entrance — scoped to .js so noscript users see content */
+.js .hero-inner {
   opacity: 0;
 }
 .hero-inner.hero-ready {
@@ -1984,5 +1984,119 @@ body.hero-loaded .hero-card {
   }
   .leadership-grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =========================================
+   SKIP NAVIGATION
+   ========================================= */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--sp-4);
+  padding: var(--sp-3) var(--sp-6);
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  border-radius: 0 0 var(--radius) var(--radius);
+  z-index: 200;
+  transition: top 0.2s var(--ease-out);
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* =========================================
+   FOCUS MANAGEMENT
+   ========================================= */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.nav-links a:focus-visible,
+.nav-logo:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+.form-control:focus-visible {
+  outline: none;
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px oklch(27% 0.075 248 / 0.12);
+}
+
+/* =========================================
+   FORM ERRORS
+   ========================================= */
+.form-error {
+  display: block;
+  font-size: var(--text-xs);
+  color: oklch(48% 0.18 25);
+  margin-top: var(--sp-1);
+  font-weight: 500;
+}
+
+.form-control[aria-invalid="true"] {
+  border-color: oklch(55% 0.15 25);
+  box-shadow: 0 0 0 3px oklch(55% 0.15 25 / 0.1);
+}
+
+/* =========================================
+   TEXT OVERFLOW RESILIENCE
+   ========================================= */
+.hero-heading,
+.ministry-card-content h3,
+.leader-name,
+.value-item h3,
+.program-content h2,
+.page-hero h1,
+.sunday-cta h2 {
+  overflow-wrap: break-word;
+}
+
+.nav-logo {
+  min-width: 0;
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .js .animate-up,
+  .js .animate-fade {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .js .hero-inner {
+    opacity: 1 !important;
   }
 }

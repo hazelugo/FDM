@@ -19,6 +19,7 @@
     <link rel="alternate" hreflang="es" href="es/contact.html" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- ======== NAVIGATION ======== -->
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <div class="nav-inner">
@@ -62,7 +63,7 @@
       </div>
     </nav>
 
-    <main>
+    <main id="main-content">
       <!-- ======== PAGE HERO ======== -->
       <section class="page-hero">
         <div class="container page-hero-inner">
@@ -106,7 +107,11 @@
                       placeholder="Jane"
                       autocomplete="given-name"
                       required
+                      aria-required="true"
+                      aria-describedby="first-name-error"
+                      data-error-required="First name is required."
                     />
+                    <p class="form-error" id="first-name-error" hidden></p>
                   </div>
                   <div class="form-group">
                     <label for="last-name">Last Name</label>
@@ -118,7 +123,11 @@
                       placeholder="Smith"
                       autocomplete="family-name"
                       required
+                      aria-required="true"
+                      aria-describedby="last-name-error"
+                      data-error-required="Last name is required."
                     />
+                    <p class="form-error" id="last-name-error" hidden></p>
                   </div>
                 </div>
 
@@ -132,7 +141,12 @@
                     placeholder="jane@example.com"
                     autocomplete="email"
                     required
+                    aria-required="true"
+                    aria-describedby="email-error"
+                    data-error-required="Email address is required."
+                    data-error-email="Please enter a valid email address."
                   />
+                  <p class="form-error" id="email-error" hidden></p>
                 </div>
 
                 <div class="form-group">
@@ -173,7 +187,11 @@
                     class="form-control"
                     placeholder="Tell us what's on your heart…"
                     required
+                    aria-required="true"
+                    aria-describedby="message-error"
+                    data-error-required="Please share what's on your heart."
                   ></textarea>
+                  <p class="form-error" id="message-error" hidden></p>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-block btn-padded">
