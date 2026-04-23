@@ -81,12 +81,11 @@
         <div class="container">
           <div class="contact-grid">
             <!-- FORMULARIO -->
-            <div>
+            <div class="contact-form-wrap">
               <span class="eyebrow animate-up">Envíanos un Mensaje</span>
               <h2
                 class="heading-lg animate-up"
                 data-delay="1"
-                style="margin-top: var(--sp-3); margin-bottom: var(--sp-8)"
               >
                 ¿En qué podemos<br />ayudarte?
               </h2>
@@ -140,9 +139,7 @@
                 <div class="form-group">
                   <label for="phone"
                     >Teléfono
-                    <span style="color: var(--text-muted); font-weight: 400"
-                      >(opcional)</span
-                    ></label
+                    <span class="label-optional">(opcional)</span></label
                   >
                   <input
                     type="tel"
@@ -182,28 +179,12 @@
                   ></textarea>
                 </div>
 
-                <button
-                  type="submit"
-                  class="btn btn-primary"
-                  style="
-                    width: 100%;
-                    justify-content: center;
-                    padding-block: 1em;
-                  "
-                >
+                <button type="submit" class="btn btn-primary btn-block btn-padded">
                   Enviar Mensaje
                 </button>
 
-                <p
-                  style="
-                    font-size: var(--text-xs);
-                    color: var(--text-muted);
-                    text-align: center;
-                    margin-top: var(--sp-4);
-                  "
-                >
-                  Respetamos tu privacidad. Tu información nunca se comparte con
-                  terceros.
+                <p class="form-privacy-note">
+                  Respetamos tu privacidad. Tu información nunca se comparte con terceros.
                 </p>
               </form>
             </div>
@@ -226,9 +207,7 @@
                   <div class="contact-detail-text">
                     <h4>Teléfono</h4>
                     <p>
-                      <a href="tel:+15550000000" style="color: var(--navy)"
-                        >(555) 000-0000</a
-                      ><br />Lunes a Viernes, 9 AM–5 PM
+                      <a href="tel:+15550000000" class="contact-direct-link">(555) 000-0000</a><br />Lunes a Viernes, 9 AM–5 PM
                     </p>
                   </div>
                 </div>
@@ -239,9 +218,9 @@
                     <h4>Correo</h4>
                     <p>
                       <a
-                        href="mailto:hola@faithcommunitychurch.org"
-                        style="color: var(--navy)"
-                        >hola@faithcommunitychurch.org</a
+                        href="mailto:hola@fountainofmercy.org"
+                        class="contact-direct-link"
+                        >hola@fountainofmercy.org</a
                       >
                     </p>
                   </div>
@@ -259,38 +238,16 @@
                   <div class="contact-detail-icon" aria-hidden="true">📱</div>
                   <div class="contact-detail-text">
                     <h4>Síguenos</h4>
-                    <p>
-                      <a href="#" style="color: var(--navy); display: block"
-                        >Facebook</a
-                      >
-                      <a
-                        href="#"
-                        style="
-                          color: var(--navy);
-                          display: block;
-                          margin-top: 4px;
-                        "
-                        >Instagram</a
-                      >
-                      <a
-                        href="#"
-                        style="
-                          color: var(--navy);
-                          display: block;
-                          margin-top: 4px;
-                        "
-                        >YouTube</a
-                      >
+                    <p class="contact-social-links">
+                      <a href="#">Facebook</a>
+                      <a href="#">Instagram</a>
+                      <a href="#">YouTube</a>
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div
-                class="map-placeholder"
-                style="margin-top: var(--sp-8)"
-                aria-label="Mapa de ubicación"
-              >
+              <div class="map-placeholder" aria-label="Mapa de ubicación">
                 [ Mapa Aquí ]
               </div>
             </div>
@@ -303,23 +260,16 @@
         <div class="container">
           <span class="eyebrow animate-up">Preguntas Frecuentes</span>
           <h2
-            class="heading-xl animate-up"
+            class="heading-xl animate-up faq-section-heading"
             data-delay="1"
             id="faq-heading"
-            style="margin-bottom: var(--sp-10)"
           >
             Respuestas rápidas.
           </h2>
 
-          <div
-            style="
-              display: grid;
-              grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-              gap: var(--sp-6);
-            "
-          >
+          <div class="faq-grid">
             <div class="value-item animate-up" data-delay="1">
-              <h3 style="font-size: var(--text-lg)">¿Cómo debo vestirme?</h3>
+              <h3>¿Cómo debo vestirme?</h3>
               <p>
                 Ven como eres — literalmente. No tenemos código de vestimenta.
                 Algunos vienen en jeans, otros en su mejor ropa dominguera.
@@ -328,7 +278,7 @@
             </div>
 
             <div class="value-item animate-up" data-delay="2">
-              <h3 style="font-size: var(--text-lg)">¿Hay cuidado de niños?</h3>
+              <h3>¿Hay cuidado de niños?</h3>
               <p>
                 ¡Sí! Ofrecemos nursería y programación para niños durante ambos
                 servicios dominicales. Regístralos al llegar.
@@ -336,7 +286,7 @@
             </div>
 
             <div class="value-item animate-up" data-delay="2">
-              <h3 style="font-size: var(--text-lg)">
+              <h3>
                 ¿Cuánto dura el servicio?
               </h3>
               <p>
@@ -346,7 +296,7 @@
             </div>
 
             <div class="value-item animate-up" data-delay="3">
-              <h3 style="font-size: var(--text-lg)">¿Necesito registrarme?</h3>
+              <h3>¿Necesito registrarme?</h3>
               <p>
                 No — solo ven. Si quieres avisarnos para que podamos recibirte
                 personalmente, ¡puedes escribirnos antes con mucho gusto!
@@ -354,7 +304,7 @@
             </div>
 
             <div class="value-item animate-up" data-delay="3">
-              <h3 style="font-size: var(--text-lg)">¿Puedo verlo en línea?</h3>
+              <h3>¿Puedo verlo en línea?</h3>
               <p>
                 ¡Sí! Transmitimos en vivo el servicio de las 11 AM por Facebook
                 y YouTube. Los enlaces están en nuestras redes sociales.
@@ -362,7 +312,7 @@
             </div>
 
             <div class="value-item animate-up" data-delay="4">
-              <h3 style="font-size: var(--text-lg)">¿Hay estacionamiento?</h3>
+              <h3>¿Hay estacionamiento?</h3>
               <p>
                 Contamos con un estacionamiento gratuito junto al edificio y
                 estacionamiento en la calle. Los espacios accesibles están cerca
@@ -441,7 +391,7 @@
           </p>
           <p>
             123 Main Street, Tu Ciudad, Estado 00000 &mdash;
-            <a href="tel:+15550000000" style="color: inherit">(555) 000-0000</a>
+            <a href="tel:+15550000000">(555) 000-0000</a>
           </p>
         </div>
       </div>
