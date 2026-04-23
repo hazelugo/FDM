@@ -326,13 +326,23 @@ h4 {
 }
 
 .nav-logo {
-  display: block;
-  width: 200px;
-  height: 40px;
-  background: url('../assets/aa/aalogo1.png') no-repeat center left;
-  background-size: contain;
-  color: transparent;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
   flex-shrink: 0;
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.nav-logo-text {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text);
 }
 
 .nav-logo-cross {
