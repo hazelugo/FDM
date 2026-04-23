@@ -12,9 +12,11 @@ const nav    = document.getElementById('site-nav');
 const toggle = document.getElementById('nav-toggle');
 const links  = document.getElementById('nav-links');
 
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 24);
-}, { passive: true });
+if (nav) {
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 24);
+  }, { passive: true });
+}
 
 if (toggle && links) {
   const getFocusable = (el) => [
@@ -82,21 +84,27 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 /* =========================================
    SCROLL ANIMATIONS
    ========================================= */
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-);
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  );
 
-document.querySelectorAll('.animate-up, .animate-fade').forEach(el => {
-  observer.observe(el);
-});
+  document.querySelectorAll('.animate-up, .animate-fade').forEach(el => {
+    observer.observe(el);
+  });
+} else {
+  document.querySelectorAll('.animate-up, .animate-fade').forEach(el => {
+    el.classList.add('in-view');
+  });
+}
 
 /* =========================================
    HERO ENTRANCE ANIMATION

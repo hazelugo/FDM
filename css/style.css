@@ -14,7 +14,7 @@
   --copper: oklch(57% 0.11 38);
   --copper-pale: oklch(94% 0.035 38);
   --text: oklch(13% 0.015 82);
-  --text-muted: oklch(0.396 0.016 264);
+  --text-muted: oklch(42% 0.014 82);
   --white: oklch(99% 0.003 82);
 
   /* Fonts */
@@ -86,6 +86,9 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+p {
+  overflow-wrap: break-word;
 }
 a {
   color: inherit;
@@ -329,7 +332,6 @@ h4 {
   display: flex;
   align-items: center;
   gap: var(--sp-3);
-  flex-shrink: 0;
 }
 
 .nav-logo-img {
@@ -343,8 +345,11 @@ h4 {
   font-size: var(--text-lg);
   font-weight: 600;
   color: var(--text);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
 
 .nav-links {
   display: flex;
@@ -451,7 +456,6 @@ h4 {
   align-items: center;
   gap: var(--sp-2);
 }
-
 
 .footer-brand p {
   font-size: var(--text-sm);
@@ -760,6 +764,7 @@ h4 {
   font-weight: 400;
   color: var(--navy);
   line-height: 1.35;
+  max-width: 55ch;
 }
 
 .scripture-ref {
@@ -897,7 +902,6 @@ h4 {
   z-index: 2;
   color: var(--white);
 }
-
 
 .ministry-card-content h3 {
   font-family: var(--font-display);
@@ -1082,7 +1086,8 @@ h4 {
    INTERIOR PAGE HERO
    ========================================= */
 .page-hero {
-  padding-block: calc(var(--nav-h) + clamp(var(--sp-10), 5vw, var(--sp-20))) clamp(var(--sp-16), 7vw, var(--sp-24));
+  padding-block: calc(var(--nav-h) + clamp(var(--sp-10), 5vw, var(--sp-20)))
+    clamp(var(--sp-16), 7vw, var(--sp-24));
   background: var(--cream-deep);
   border-bottom: 1px solid var(--cream-border);
   position: relative;
@@ -1151,7 +1156,8 @@ h4 {
    ABOUT PAGE
    ========================================= */
 .about-mission {
-  padding-block: clamp(var(--sp-20), 10vw, var(--sp-32)) clamp(var(--sp-16), 8vw, var(--sp-32));
+  padding-block: clamp(var(--sp-20), 10vw, var(--sp-32))
+    clamp(var(--sp-16), 8vw, var(--sp-32));
 }
 
 .mission-statement {
@@ -1572,7 +1578,6 @@ h4 {
   min-width: 80px;
 }
 
-
 .section-item-link {
   color: var(--gold);
   font-size: var(--text-sm);
@@ -1674,6 +1679,9 @@ textarea.form-control {
   align-items: flex-start;
 }
 
+.contact-detail-text {
+  min-width: 0;
+}
 
 .contact-detail-text h4 {
   font-family: var(--font-body);
@@ -1732,6 +1740,8 @@ textarea.form-control {
 
 .contact-direct-link {
   color: var(--navy);
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 
 .contact-social-links a {
@@ -2020,6 +2030,12 @@ body.hero-loaded .hero-card {
   outline: none;
   border-color: var(--navy);
   box-shadow: 0 0 0 3px oklch(27% 0.075 248 / 0.12);
+}
+
+.ministry-card:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: var(--radius-lg);
 }
 
 /* =========================================
