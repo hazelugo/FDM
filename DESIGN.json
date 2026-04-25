@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-04-24T00:00:00Z",
+  "title": "Design System: Fountain of Mercy",
+  "extensions": {
+    "colorMeta": {
+      "warm-parchment":      { "role": "neutral",   "displayName": "Warm Parchment",        "canonical": "oklch(96.5% 0.009 82)",  "tonalRamp": ["oklch(40% 0.015 82)", "oklch(55% 0.014 82)", "oklch(68% 0.013 82)", "oklch(78% 0.013 82)", "oklch(85% 0.016 82)", "oklch(91% 0.014 82)", "oklch(96.5% 0.009 82)", "oklch(99% 0.003 82)"] },
+      "parchment-deep":      { "role": "neutral",   "displayName": "Parchment Deep",         "canonical": "oklch(92.5% 0.014 82)",  "tonalRamp": ["oklch(40% 0.015 82)", "oklch(55% 0.014 82)", "oklch(68% 0.013 82)", "oklch(78% 0.013 82)", "oklch(85% 0.016 82)", "oklch(92.5% 0.014 82)", "oklch(96.5% 0.009 82)", "oklch(99% 0.003 82)"] },
+      "parchment-border":    { "role": "neutral",   "displayName": "Parchment Border",       "canonical": "oklch(88% 0.018 82)",    "tonalRamp": ["oklch(40% 0.015 82)", "oklch(55% 0.014 82)", "oklch(68% 0.015 82)", "oklch(78% 0.016 82)", "oklch(88% 0.018 82)", "oklch(93% 0.014 82)", "oklch(96.5% 0.009 82)", "oklch(99% 0.003 82)"] },
+      "vesper-navy":         { "role": "primary",   "displayName": "Vesper Navy",             "canonical": "oklch(27% 0.075 248)",   "tonalRamp": ["oklch(15% 0.06 248)", "oklch(22% 0.075 248)", "oklch(27% 0.075 248)", "oklch(35% 0.065 248)", "oklch(50% 0.055 248)", "oklch(65% 0.04 248)", "oklch(80% 0.025 248)", "oklch(92% 0.015 248)"] },
+      "vesper-navy-mid":     { "role": "primary",   "displayName": "Vesper Navy Mid",         "canonical": "oklch(38% 0.065 248)",   "tonalRamp": ["oklch(15% 0.06 248)", "oklch(22% 0.075 248)", "oklch(27% 0.075 248)", "oklch(38% 0.065 248)", "oklch(50% 0.055 248)", "oklch(65% 0.04 248)", "oklch(80% 0.025 248)", "oklch(92% 0.015 248)"] },
+      "vesper-navy-pale":    { "role": "primary",   "displayName": "Vesper Navy Pale",        "canonical": "oklch(92% 0.025 248)",   "tonalRamp": ["oklch(15% 0.06 248)", "oklch(27% 0.075 248)", "oklch(38% 0.065 248)", "oklch(55% 0.05 248)", "oklch(70% 0.035 248)", "oklch(82% 0.028 248)", "oklch(92% 0.025 248)", "oklch(97% 0.01 248)"] },
+      "liturgical-gold":     { "role": "secondary", "displayName": "Liturgical Gold",         "canonical": "oklch(67% 0.13 70)",     "tonalRamp": ["oklch(20% 0.07 70)", "oklch(33% 0.11 70)", "oklch(47% 0.13 70)", "oklch(57% 0.13 70)", "oklch(67% 0.13 70)", "oklch(76% 0.1 70)", "oklch(85% 0.07 70)", "oklch(93% 0.04 70)"] },
+      "liturgical-gold-pale":{ "role": "secondary", "displayName": "Liturgical Gold Pale",    "canonical": "oklch(90% 0.055 74)",    "tonalRamp": ["oklch(20% 0.07 74)", "oklch(35% 0.1 74)", "oklch(50% 0.12 74)", "oklch(63% 0.12 74)", "oklch(75% 0.09 74)", "oklch(83% 0.07 74)", "oklch(90% 0.055 74)", "oklch(96% 0.025 74)"] },
+      "ember-copper":        { "role": "tertiary",  "displayName": "Ember Copper",            "canonical": "oklch(57% 0.11 38)",     "tonalRamp": ["oklch(20% 0.07 38)", "oklch(32% 0.10 38)", "oklch(44% 0.11 38)", "oklch(57% 0.11 38)", "oklch(68% 0.09 38)", "oklch(78% 0.07 38)", "oklch(87% 0.045 38)", "oklch(94% 0.025 38)"] },
+      "ember-copper-pale":   { "role": "tertiary",  "displayName": "Ember Copper Pale",       "canonical": "oklch(94% 0.035 38)",    "tonalRamp": ["oklch(20% 0.07 38)", "oklch(35% 0.10 38)", "oklch(50% 0.11 38)", "oklch(62% 0.10 38)", "oklch(74% 0.07 38)", "oklch(84% 0.05 38)", "oklch(94% 0.035 38)", "oklch(98% 0.012 38)"] },
+      "deep-text":           { "role": "neutral",   "displayName": "Deep Text",               "canonical": "oklch(13% 0.015 82)",    "tonalRamp": ["oklch(13% 0.015 82)", "oklch(22% 0.015 82)", "oklch(35% 0.014 82)", "oklch(50% 0.013 82)", "oklch(65% 0.012 82)", "oklch(78% 0.011 82)", "oklch(90% 0.009 82)", "oklch(97% 0.005 82)"] },
+      "muted-text":          { "role": "neutral",   "displayName": "Muted Text",              "canonical": "oklch(42% 0.014 82)",    "tonalRamp": ["oklch(13% 0.015 82)", "oklch(22% 0.015 82)", "oklch(42% 0.014 82)", "oklch(58% 0.013 82)", "oklch(72% 0.012 82)", "oklch(84% 0.010 82)", "oklch(93% 0.008 82)", "oklch(99% 0.003 82)"] },
+      "sanctuary-white":     { "role": "neutral",   "displayName": "Sanctuary White",         "canonical": "oklch(99% 0.003 82)",    "tonalRamp": ["oklch(13% 0.015 82)", "oklch(30% 0.015 82)", "oklch(50% 0.013 82)", "oklch(68% 0.011 82)", "oklch(82% 0.009 82)", "oklch(92% 0.006 82)", "oklch(96.5% 0.009 82)", "oklch(99% 0.003 82)"] }
+    },
+    "typographyMeta": {
+      "display":  { "displayName": "Display",  "purpose": "Hero headline only (index.html h1). Italic em in Liturgical Gold for emotional emphasis word." },
+      "headline": { "displayName": "Headline", "purpose": "Interior page hero h1; CTA section headings like the Sunday CTA block." },
+      "title":    { "displayName": "Title",    "purpose": "Section h2 headings throughout the site. The workhorse heading level." },
+      "body":     { "displayName": "Body",     "purpose": "All prose. Line length 48–65ch. DM Sans at 1rem–1.125rem fluid." },
+      "label":    { "displayName": "Label",    "purpose": "Eyebrows, nav links, footer column heads, event tags. Uppercase tracking 0.12em." }
+    },
+    "shadows": [
+      { "name": "hover-lift",       "value": "0 12px 40px oklch(13% 0.015 82 / 0.1)",       "purpose": "Card hover state (leader cards). Appears only on hover, never at rest." },
+      { "name": "btn-navy-glow",    "value": "0 6px 24px oklch(27% 0.075 248 / 0.25)",      "purpose": "Primary button hover. Color matches the button itself — a glow, not a drop shadow." },
+      { "name": "btn-gold-glow",    "value": "0 6px 24px oklch(67% 0.13 70 / 0.35)",        "purpose": "Gold button hover. Slightly warmer and more prominent." },
+      { "name": "nav-scroll",       "value": "0 1px 0 oklch(88% 0.018 82), 0 4px 24px oklch(13% 0.015 82 / 0.06)", "purpose": "Navigation bar on scroll. Pairs with backdrop-filter: blur(12px)." },
+      { "name": "focus-navy-ring",  "value": "0 0 0 3px oklch(27% 0.075 248 / 0.12)",       "purpose": "Input focus indicator. Used in addition to border-color change." }
+    ],
+    "motion": [
+      { "name": "ease-out",    "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Standard easing for all state transitions. Exponential deceleration — no bounce, no spring." },
+      { "name": "animate-up",  "value": "opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1)", "purpose": "Scroll-triggered entrance: opacity 0→1, translateY 28px→0." },
+      { "name": "animate-fade","value": "opacity 0.6s cubic-bezier(0.22,1,0.36,1)", "purpose": "Scroll-triggered fade: opacity 0→1." },
+      { "name": "hero-cascade","value": "Staggered: tag 0.1s, heading 0.25s, sub 0.4s, actions 0.55s, card 0.45s", "purpose": "Hero entrance sequence on page load. Body class hero-loaded triggers all." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "1024px", "purpose": "Hero collapses to single-column; ministry grid shifts to 2-col; footer to 2-col." },
+      { "name": "mobile", "value": "768px",  "purpose": "Nav collapses to hamburger; welcome/about grids to 1-col; schedule time column narrowed." },
+      { "name": "xs",     "value": "480px",  "purpose": "Hero/CTA actions stack vertically; leadership grid 2-col." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA. Used for Join Us Sunday, form submits, and primary conversion actions.",
+      "html": "<button class=\"ds-btn-primary\">Join Us Sunday</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85em 1.75em; font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(0.875rem, 0.82rem + 0.28vw, 1rem); font-weight: 500; letter-spacing: 0.04em; background: oklch(27% 0.075 248); color: oklch(99% 0.003 82); border: 1.5px solid oklch(27% 0.075 248); border-radius: 4px; cursor: pointer; white-space: nowrap; transition: transform 0.18s cubic-bezier(0.22,1,0.36,1), box-shadow 0.18s cubic-bezier(0.22,1,0.36,1), background 0.18s, border-color 0.18s; } .ds-btn-primary:hover { background: oklch(38% 0.065 248); border-color: oklch(38% 0.065 248); transform: translateY(-1px); box-shadow: 0 6px 24px oklch(27% 0.075 248 / 0.25); } .ds-btn-primary:active { transform: translateY(0); box-shadow: none; } .ds-btn-primary:focus-visible { outline: 2px solid oklch(67% 0.13 70); outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary CTA. Paired alongside Primary — never the sole action on a page.",
+      "html": "<button class=\"ds-btn-outline\">Learn More</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85em 1.75em; font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(0.875rem, 0.82rem + 0.28vw, 1rem); font-weight: 500; letter-spacing: 0.04em; background: transparent; color: oklch(27% 0.075 248); border: 1.5px solid oklch(27% 0.075 248); border-radius: 4px; cursor: pointer; white-space: nowrap; transition: transform 0.18s cubic-bezier(0.22,1,0.36,1), background 0.18s, color 0.18s; } .ds-btn-outline:hover { background: oklch(27% 0.075 248); color: oklch(99% 0.003 82); transform: translateY(-1px); } .ds-btn-outline:active { transform: translateY(0); } .ds-btn-outline:focus-visible { outline: 2px solid oklch(67% 0.13 70); outline-offset: 3px; }"
+    },
+    {
+      "name": "Gold Button",
+      "kind": "button",
+      "refersTo": "button-gold",
+      "description": "Festive CTA. Used sparingly in navy-background sections for the highest-priority action.",
+      "html": "<button class=\"ds-btn-gold\">Plan Your Visit</button>",
+      "css": ".ds-btn-gold { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85em 1.75em; font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(0.875rem, 0.82rem + 0.28vw, 1rem); font-weight: 500; letter-spacing: 0.04em; background: oklch(67% 0.13 70); color: oklch(27% 0.075 248); border: 1.5px solid oklch(67% 0.13 70); border-radius: 4px; cursor: pointer; white-space: nowrap; transition: transform 0.18s cubic-bezier(0.22,1,0.36,1), box-shadow 0.18s cubic-bezier(0.22,1,0.36,1), background 0.18s; } .ds-btn-gold:hover { background: oklch(62% 0.14 70); border-color: oklch(62% 0.14 70); transform: translateY(-1px); box-shadow: 0 6px 24px oklch(67% 0.13 70 / 0.35); } .ds-btn-gold:active { transform: translateY(0); } .ds-btn-gold:focus-visible { outline: 2px solid oklch(27% 0.075 248); outline-offset: 3px; }"
+    },
+    {
+      "name": "Form Input",
+      "kind": "input",
+      "refersTo": "input-default",
+      "description": "Text fields and textareas on the Contact page. White on parchment background.",
+      "html": "<div class=\"ds-form-group\"><label class=\"ds-label\" for=\"ds-name\">Your Name</label><input class=\"ds-input\" id=\"ds-name\" type=\"text\" placeholder=\"Jane Smith\" /></div>",
+      "css": ".ds-form-group { display: flex; flex-direction: column; gap: 0.5rem; } .ds-label { font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(0.875rem, 0.82rem + 0.28vw, 1rem); font-weight: 500; color: oklch(27% 0.075 248); } .ds-input { width: 100%; padding: 0.85em 1em; background: oklch(99% 0.003 82); border: 1.5px solid oklch(88% 0.018 82); border-radius: 4px; font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(1rem, 0.92rem + 0.4vw, 1.125rem); color: oklch(13% 0.015 82); outline: none; transition: border-color 0.2s, box-shadow 0.2s; } .ds-input::placeholder { color: oklch(42% 0.014 82); } .ds-input:focus { border-color: oklch(27% 0.075 248); box-shadow: 0 0 0 3px oklch(27% 0.075 248 / 0.12); }"
+    },
+    {
+      "name": "Eyebrow Label",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Pre-heading label used above section titles and hero headings. Always gold, always uppercase.",
+      "html": "<span class=\"ds-eyebrow\">Fountain of Mercy &mdash; Est. 2018</span>",
+      "css": ".ds-eyebrow { display: block; font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem); font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(67% 0.13 70); margin-bottom: 1rem; }"
+    },
+    {
+      "name": "Schedule Event Row",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "A single event in the weekly schedule list. Featured variant carries gold indicator + amber tint.",
+      "html": "<div class=\"ds-event ds-event--featured\"><span class=\"ds-event-time\">9:00 AM</span><div><p class=\"ds-event-name\">Sunday Worship Service</p><p class=\"ds-event-desc\">All ages welcome. Contemporary worship with full band.</p></div><span class=\"ds-event-tag\">Featured</span></div>",
+      "css": ".ds-event { display: grid; grid-template-columns: 120px 1fr auto; align-items: center; gap: 1.5rem; padding: 1.25rem 1.5rem; background: oklch(92.5% 0.014 82); border-radius: 4px; border-left: 3px solid transparent; transition: border-color 0.2s, background 0.2s; } .ds-event:hover { border-left-color: oklch(67% 0.13 70); background: oklch(92% 0.024 74); } .ds-event--featured { border-left-color: oklch(67% 0.13 70); background: oklch(94% 0.022 74); } .ds-event-time { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.125rem, 1rem + 0.65vw, 1.375rem); font-weight: 600; color: oklch(27% 0.075 248); } .ds-event-name { font-weight: 500; color: oklch(13% 0.015 82); } .ds-event-desc { font-size: clamp(0.875rem, 0.82rem + 0.28vw, 1rem); color: oklch(42% 0.014 82); margin-top: 0.25rem; } .ds-event-tag { font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(67% 0.13 70); background: oklch(90% 0.055 74); padding: 0.25rem 0.75rem; border-radius: 100px; white-space: nowrap; }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Fixed header. Transparent at page top; frosted parchment with hair-line border after scroll.",
+      "html": "<nav class=\"ds-nav\"><div class=\"ds-nav-inner\"><a href=\"#\" class=\"ds-nav-brand\">Fountain of Mercy</a><ul class=\"ds-nav-links\"><li><a href=\"#\">Home</a></li><li><a href=\"#\">About</a></li><li><a href=\"#\">Schedule</a></li><li><a href=\"#\">Programs</a></li><li><a href=\"#\">Contact</a></li></ul><a href=\"#\" class=\"ds-btn-primary\" style=\"margin-left:1rem\">Join Us Sunday</a></div></nav>",
+      "css": ".ds-nav { position: fixed; top: 0; left: 0; right: 0; height: 80px; background: oklch(96.5% 0.009 82 / 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 1px 0 oklch(88% 0.018 82), 0 4px 24px oklch(13% 0.015 82 / 0.06); z-index: 100; } .ds-nav-inner { max-width: 1320px; margin-inline: auto; padding-inline: clamp(1.5rem, 5vw, 4rem); height: 100%; display: flex; align-items: center; gap: 2rem; } .ds-nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.125rem, 1rem + 0.65vw, 1.375rem); font-weight: 600; color: oklch(13% 0.015 82); text-decoration: none; } .ds-nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; margin-left: auto; } .ds-nav-links a { font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(0.875rem, 0.82rem + 0.28vw, 1rem); font-weight: 400; color: oklch(13% 0.015 82); text-decoration: none; position: relative; transition: color 0.15s; } .ds-nav-links a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: oklch(67% 0.13 70); transition: width 0.2s cubic-bezier(0.22,1,0.36,1); } .ds-nav-links a:hover { color: oklch(27% 0.075 248); } .ds-nav-links a:hover::after { width: 100%; }"
+    },
+    {
+      "name": "Value Item",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "A value or FAQ item — full-width row with a top border accent that shifts color on hover.",
+      "html": "<div class=\"ds-value\"><span class=\"ds-value-num\">01</span><h3 class=\"ds-value-title\">Community First</h3><p class=\"ds-value-body\">We believe in building relationships that outlast Sunday morning. Everyone belongs here.</p></div>",
+      "css": ".ds-value { padding: 2rem 0; border-top: 2px solid oklch(88% 0.018 82); transition: border-top-color 0.2s; } .ds-value:first-child { border-top-color: oklch(67% 0.13 70); } .ds-value:hover { border-top-color: oklch(57% 0.11 38); } .ds-value-num { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2.25rem, 1.75rem + 2.5vw, 4rem); font-weight: 700; color: oklch(80% 0.07 74); line-height: 1; display: block; margin-bottom: 1rem; } .ds-value-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.375rem, 1.2rem + 0.9vw, 1.75rem); font-weight: 600; color: oklch(27% 0.075 248); margin-bottom: 0.75rem; line-height: 1.1; } .ds-value-body { font-family: 'DM Sans', system-ui, sans-serif; font-size: clamp(0.875rem, 0.82rem + 0.28vw, 1rem); color: oklch(42% 0.014 82); line-height: 1.7; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Illuminated Folio",
+    "overview": "The Fountain of Mercy design system treats every screen the way a master printer treats a page: nothing placed without reason, every element considered at the level of craft that makes the reader feel the care behind it. Cormorant Garamond carries the weight of centuries — expressive, weighted, built for both intimate italic scripture and authoritative display headlines. DM Sans grounds body copy in clean modern clarity without ever reading corporate.\n\nEvery surface starts from warm parchment, not white. Sections shift through cream, parchment-deep, and vesper-navy in a rhythm that functions like turning pages. The navy sections feel like a printed cover: dark, confident, and set apart.",
+    "keyCharacteristics": [
+      "Serif display leadership with high-contrast scale ratio (4–7× body to display)",
+      "Parchment-to-navy surface rhythm as the elevation system; shadows are state-only",
+      "Liturgical Gold as a precision pointing tool — never a fill, always a signal",
+      "Fluid clamp() type scale that maintains display drama across all viewport widths",
+      "Warm but unhurried; whitespace is hospitality, not emptiness"
+    ],
+    "rules": [
+      { "name": "The Rarity Rule",          "body": "Liturgical Gold appears on 15% or less of any surface. Use it to point — eyebrows, underlines, focus rings, rule lines, tags. The moment gold covers a large background area it loses all authority.",                                                  "section": "colors" },
+      { "name": "The Warm Axis Rule",        "body": "Every neutral — text, backgrounds, borders — is tinted toward the 82° amber-gold hue axis (chroma 0.003–0.018). Introducing a neutral with zero chroma or a cold hue breaks the palette harmony immediately.",                              "section": "colors" },
+      { "name": "The Italic Accent Rule",    "body": "Cormorant Garamond italic is a design tool, not a grammatical marker. Reserve it for: emotionally important words in display headlines, scripture quotations, pullquotes. One or two words per heading maximum.",                             "section": "typography" },
+      { "name": "The Scale Ratio Rule",      "body": "The jump from body (1rem) to display (3.5rem–8rem fluid) is 4–7×. This ratio is load-bearing. Compressing it to 'feel safe' is the primary way this system loses its character. If a heading feels too large, adjust spacing — not type size.", "section": "typography" },
+      { "name": "The Flat-by-Default Rule",  "body": "Surfaces rest flat. A shadow on a card at rest signals 'this is special' — which means everything cannot be special. Reserve lift for hover states and genuinely elevated overlays.",                                                            "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Cormorant Garamond at unmistakably large sizes for display and headline levels.",
+      "Do use the cream → parchment-deep → vesper-navy section rhythm to create depth.",
+      "Do apply Liturgical Gold only for pointing: eyebrows, underlines, focus rings, rule lines, tags.",
+      "Do cap body text line length at 48–65ch.",
+      "Do use var(--ease-out) (cubic-bezier(0.22,1,0.36,1)) for all transitions.",
+      "Do ensure every interactive element has a 2px Liturgical Gold focus ring with 3px offset.",
+      "Do use Cormorant Garamond italic deliberately: hero emphasis, scripture, pullquotes. One or two words max."
+    ],
+    "donts": [
+      "Don't use clip art, decorative crosses as visual filler, or soft-vignette stock imagery.",
+      "Don't add a dark mode. The parchment-to-navy rhythm is a light-mode-only system.",
+      "Don't use pure black (#000) or pure white (#fff). Every neutral is tinted toward the warm 82° hue axis.",
+      "Don't fill large backgrounds with Liturgical Gold.",
+      "Don't use a colored border-left greater than 1px as a decorative accent on cards or list items.",
+      "Don't use gradient text (background-clip: text with a gradient fill).",
+      "Don't apply resting shadows to cards or containers. Shadows appear on hover only.",
+      "Don't compress the display type scale.",
+      "Don't reproduce the centrovida.com pattern: dense content, no whitespace, absent typographic hierarchy.",
+      "Don't use the hero-metric template (large number, small label, gradient accent).",
+      "Don't use identical card grids with repeated icon + heading + text at the same size."
+    ]
+  }
+}
