@@ -232,7 +232,7 @@ const docTrack = document.getElementById('doctrine-track');
 if (docTrack) {
   const prevBtn = document.getElementById('doctrine-prev');
   const nextBtn = document.getElementById('doctrine-next');
-  const counter = document.getElementById('doctrine-current');
+
   const cards   = docTrack.querySelectorAll('.doctrine-card');
   const total   = cards.length;
 
@@ -245,8 +245,7 @@ if (docTrack) {
   const updateState = () => {
     const sl = docTrack.scrollLeft;
     const cw = cardWidth();
-    if (counter) counter.textContent = Math.min(Math.round(sl / cw) + 1, total);
-    if (prevBtn) prevBtn.disabled = sl < 4;
+if (prevBtn) prevBtn.disabled = sl < 4;
     if (nextBtn) nextBtn.disabled = sl >= docTrack.scrollWidth - docTrack.clientWidth - 4;
   };
 

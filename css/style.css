@@ -2010,9 +2010,29 @@ body.hero-loaded .hero-card {
 }
 
 .doctrine-track-outer {
+  position: relative;
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+.doctrine-track-outer::before,
+.doctrine-track-outer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3%;
+  z-index: 1;
+  pointer-events: none;
+}
+.doctrine-track-outer::before {
+  left: 0;
+  background: linear-gradient(to right, var(--cream-deep), transparent);
+}
+.doctrine-track-outer::after {
+  right: 0;
+  background: linear-gradient(to left, var(--cream-deep), transparent);
 }
 
 .doctrine-track {
@@ -2022,7 +2042,7 @@ body.hero-loaded .hero-card {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  padding-inline: clamp(var(--sp-16), 10vw, var(--sp-32));
+  padding-inline: clamp(var(--sp-6), 5vw, var(--sp-16));
   padding-bottom: var(--sp-4);
   scrollbar-width: none;
   cursor: grab;
@@ -2054,17 +2074,12 @@ body.hero-loaded .hero-card {
   border: none;
 }
 
-.doctrine-nav {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-3);
-  margin-top: var(--sp-8);
-}
-
 .doctrine-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
   width: 44px;
   height: 44px;
-  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2076,13 +2091,21 @@ body.hero-loaded .hero-card {
   transition:
     background 0.18s var(--ease-out),
     border-color 0.18s var(--ease-out),
-    transform 0.18s var(--ease-out);
+    box-shadow 0.18s var(--ease-out);
+}
+.doctrine-arrow--prev {
+  left: clamp(var(--sp-4), 3vw, var(--sp-8));
+  transform: translateY(-50%);
+}
+.doctrine-arrow--next {
+  right: clamp(var(--sp-4), 3vw, var(--sp-8));
+  transform: translateY(-50%);
 }
 .doctrine-arrow:hover:not(:disabled) {
   background: var(--navy);
   border-color: var(--navy);
   color: var(--white);
-  transform: translateY(-1px);
+  box-shadow: 0 4px 12px oklch(27% 0.075 248 / 0.25);
 }
 .doctrine-arrow:disabled {
   opacity: 0.35;
@@ -2091,18 +2114,6 @@ body.hero-loaded .hero-card {
 .doctrine-arrow:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
-}
-
-.doctrine-counter {
-  margin-left: var(--sp-2);
-  font-family: var(--font-body);
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-}
-.doctrine-counter strong {
-  color: var(--navy);
-  font-weight: 500;
 }
 
 .doctrine-card {
