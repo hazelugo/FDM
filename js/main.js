@@ -224,3 +224,116 @@ if (contactForm) {
     }, 3000);
   });
 }
+
+/* =========================================
+   DOCTRINE CAROUSEL
+   ========================================= */
+const docTrack = document.getElementById('doctrine-track');
+if (docTrack) {
+  const prevBtn = document.getElementById('doctrine-prev');
+  const nextBtn = document.getElementById('doctrine-next');
+  const counter = document.getElementById('doctrine-current');
+  const cards   = docTrack.querySelectorAll('.doctrine-card');
+  const total   = cards.length;
+
+  const cardWidth = () => {
+    const c = cards[0];
+    if (!c) return 0;
+    return c.offsetWidth + (parseFloat(getComputedStyle(docTrack).columnGap) || 0);
+  };
+
+  const updateState = () => {
+    const sl = docTrack.scrollLeft;
+    const cw = cardWidth();
+    if (counter) counter.textContent = Math.min(Math.round(sl / cw) + 1, total);
+    if (prevBtn) prevBtn.disabled = sl < 4;
+    if (nextBtn) nextBtn.disabled = sl >= docTrack.scrollWidth - docTrack.clientWidth - 4;
+  };
+
+  if (prevBtn) prevBtn.addEventListener('click', () => docTrack.scrollBy({ left: -cardWidth(), behavior: 'smooth' }));
+  if (nextBtn) nextBtn.addEventListener('click', () => docTrack.scrollBy({ left:  cardWidth(), behavior: 'smooth' }));
+  docTrack.addEventListener('scroll', updateState, { passive: true });
+  docTrack.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); docTrack.scrollBy({ left:  cardWidth(), behavior: 'smooth' }); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); docTrack.scrollBy({ left: -cardWidth(), behavior: 'smooth' }); }
+  });
+
+  // Drag-to-scroll — capture only starts after real movement so taps still fire
+  let isDragging = false, startX = 0, startScroll = 0, dragDelta = 0, tapTarget = null;
+  docTrack.addEventListener('pointerdown', (e) => {
+    isDragging = true;
+    startX = e.clientX;
+    startScroll = docTrack.scrollLeft;
+    dragDelta = 0;
+    tapTarget = e.target.closest('.doctrine-card');
+  });
+  docTrack.addEventListener('pointermove', (e) => {
+    if (!isDragging) return;
+    dragDelta = Math.abs(e.clientX - startX);
+    if (dragDelta > 4 && !docTrack.hasPointerCapture(e.pointerId)) {
+      docTrack.setPointerCapture(e.pointerId);
+    }
+    docTrack.scrollLeft = startScroll - (e.clientX - startX);
+  });
+  docTrack.addEventListener('pointerup', (e) => {
+    if (isDragging && dragDelta <= 6 && tapTarget) {
+      const i = Array.from(cards).indexOf(tapTarget);
+      if (i !== -1) openLb(i);
+    }
+    isDragging = false;
+  });
+  docTrack.addEventListener('pointercancel', () => { isDragging = false; });
+
+  // Lightbox
+  const lb = document.createElement('div');
+  lb.id = 'doc-lb';
+  lb.innerHTML = `
+    <div class="doc-lb-backdrop"></div>
+    <button class="doc-lb-close" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <img class="doc-lb-img" src="" alt="" />
+  `;
+  document.body.appendChild(lb);
+
+  const lbImg   = lb.querySelector('.doc-lb-img');
+  const lbClose = lb.querySelector('.doc-lb-close');
+  let lbIndex = 0;
+
+  const openLb = (index) => {
+    lbIndex = index;
+    const img = cards[index] && cards[index].querySelector('img');
+    if (!img) return;
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  };
+
+  const closeLb = () => {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  cards.forEach((card, i) => {
+    card.addEventListener('click', () => {
+      if (dragDelta > 6) return;
+      openLb(i);
+    });
+  });
+
+  lb.querySelector('.doc-lb-backdrop').addEventListener('click', closeLb);
+  lbClose.addEventListener('click', closeLb);
+
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape')     { e.preventDefault(); closeLb(); }
+    if (e.key === 'ArrowRight') openLb(Math.min(lbIndex + 1, total - 1));
+    if (e.key === 'ArrowLeft')  openLb(Math.max(lbIndex - 1, 0));
+  });
+
+  updateState();
+}

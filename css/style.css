@@ -1997,6 +1997,189 @@ body.hero-loaded .hero-card {
   box-shadow: 0 0 0 3px oklch(27% 0.075 248 / 0.12);
 }
 
+/* =========================================
+   DOCTRINE CAROUSEL
+   ========================================= */
+.doctrine-section {
+  padding-block: clamp(var(--sp-16), 8vw, var(--sp-32));
+  background: var(--cream-deep);
+}
+
+.doctrine-section > .container {
+  margin-bottom: var(--sp-12);
+}
+
+.doctrine-track-outer {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.doctrine-track {
+  display: flex;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-inline: clamp(var(--sp-16), 10vw, var(--sp-32));
+  padding-bottom: var(--sp-4);
+  scrollbar-width: none;
+  cursor: grab;
+}
+.doctrine-track:active {
+  cursor: grabbing;
+}
+.doctrine-track::-webkit-scrollbar {
+  display: none;
+}
+
+.doctrine-card {
+  flex: 0 0 auto;
+  width: clamp(220px, 28vw, 340px);
+  aspect-ratio: 750 / 1050;
+  scroll-snap-align: start;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--cream);
+  border: 1.5px solid var(--cream-border);
+}
+
+.doctrine-card img,
+.doctrine-card iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: none;
+}
+
+.doctrine-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-top: var(--sp-8);
+}
+
+.doctrine-arrow {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border: 1.5px solid var(--cream-border);
+  border-radius: var(--radius);
+  color: var(--navy);
+  cursor: pointer;
+  transition:
+    background 0.18s var(--ease-out),
+    border-color 0.18s var(--ease-out),
+    transform 0.18s var(--ease-out);
+}
+.doctrine-arrow:hover:not(:disabled) {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+.doctrine-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.doctrine-arrow:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.doctrine-counter {
+  margin-left: var(--sp-2);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+.doctrine-counter strong {
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.doctrine-card {
+  cursor: pointer;
+}
+.doctrine-card img {
+  transition: transform 0.35s var(--ease-out);
+}
+.doctrine-card:hover img {
+  transform: scale(1.03);
+}
+
+#doc-lb {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s var(--ease-out);
+}
+#doc-lb.open {
+  pointer-events: auto;
+  opacity: 1;
+}
+.doc-lb-backdrop {
+  position: absolute;
+  inset: 0;
+  background: oklch(13% 0.015 82 / 0.92);
+}
+.doc-lb-img {
+  position: relative;
+  max-height: 90vh;
+  max-width: min(750px, 92vw);
+  width: auto;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 32px 80px oklch(13% 0.015 82 / 0.5);
+  transform: scale(0.95);
+  transition: transform 0.3s var(--ease-out);
+}
+#doc-lb.open .doc-lb-img {
+  transform: scale(1);
+}
+.doc-lb-close {
+  position: absolute;
+  top: var(--sp-6);
+  right: var(--sp-6);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: oklch(99% 0.003 82 / 0.12);
+  border: 1px solid oklch(99% 0.003 82 / 0.2);
+  border-radius: var(--radius);
+  color: var(--white);
+  cursor: pointer;
+  transition: background 0.18s;
+  z-index: 1;
+}
+.doc-lb-close:hover {
+  background: oklch(99% 0.003 82 / 0.24);
+}
+.doc-lb-close:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .doctrine-card {
+    width: clamp(200px, 65vw, 280px);
+  }
+}
+
 .ministry-card:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
