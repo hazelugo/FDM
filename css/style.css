@@ -2002,7 +2002,7 @@ body.hero-loaded .hero-card {
    ========================================= */
 .doctrine-section {
   padding-block: clamp(var(--sp-16), 8vw, var(--sp-32));
-  background: var(--cream-deep);
+  background: var(--cream);
 }
 
 .doctrine-section > .container {
@@ -2018,21 +2018,21 @@ body.hero-loaded .hero-card {
 }
 .doctrine-track-outer::before,
 .doctrine-track-outer::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 3%;
+  width: 1%;
   z-index: 1;
   pointer-events: none;
 }
 .doctrine-track-outer::before {
   left: 0;
-  background: linear-gradient(to right, var(--cream-deep), transparent);
+  background: linear-gradient(to right, var(--cream), transparent);
 }
 .doctrine-track-outer::after {
   right: 0;
-  background: linear-gradient(to left, var(--cream-deep), transparent);
+  background: linear-gradient(to left, var(--cream), transparent);
 }
 
 .doctrine-track {
@@ -2063,6 +2063,9 @@ body.hero-loaded .hero-card {
   overflow: hidden;
   background: var(--cream);
   border: 1.5px solid var(--cream-border);
+  box-shadow:
+    0px 4px 16px oklch(13% 0.015 82 / 0.08),
+    0 1px 4px oklch(13% 0.015 82 / 0.06);
 }
 
 .doctrine-card img,
@@ -2133,6 +2136,7 @@ body.hero-loaded .hero-card {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: var(--sp-4);
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.25s var(--ease-out);
@@ -2181,6 +2185,38 @@ body.hero-loaded .hero-card {
   background: oklch(99% 0.003 82 / 0.24);
 }
 .doc-lb-close:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.doc-lb-prev,
+.doc-lb-next {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: oklch(99% 0.003 82 / 0.12);
+  border: 1px solid oklch(99% 0.003 82 / 0.2);
+  border-radius: var(--radius);
+  color: var(--white);
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.doc-lb-prev:hover,
+.doc-lb-next:hover {
+  background: oklch(99% 0.003 82 / 0.24);
+}
+.doc-lb-prev:disabled,
+.doc-lb-next:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+.doc-lb-prev:focus-visible,
+.doc-lb-next:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
