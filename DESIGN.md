@@ -10,8 +10,8 @@ colors:
   vesper-navy-pale: "oklch(92% 0.025 248)"
   liturgical-gold: "oklch(67% 0.13 70)"
   liturgical-gold-pale: "oklch(90% 0.055 74)"
-  ember-copper: "oklch(57% 0.11 38)"
-  ember-copper-pale: "oklch(94% 0.035 38)"
+  aqua: "oklch(52% 0.075 200)"
+  aqua-pale: "oklch(93% 0.028 200)"
   deep-text: "oklch(13% 0.015 82)"
   muted-text: "oklch(42% 0.014 82)"
   sanctuary-white: "oklch(99% 0.003 82)"
@@ -118,8 +118,8 @@ The palette is built from the quality of light in a stone sanctuary at midday: w
 - **Liturgical Gold Pale** (`oklch(90% 0.055 74)`): Background tint for featured items (featured schedule events, first-visit banners). Warm without being loud.
 
 ### Tertiary
-- **Ember Copper** (`oklch(57% 0.11 38)`): Appears in hover transitions (value item top borders, link hover states). Warmer and earthier than gold — signals interactivity in contexts where gold is already in use.
-- **Ember Copper Pale** (`oklch(94% 0.035 38)`): Tint version for subtle warmth.
+- **Aqua** (`oklch(52% 0.075 200)`): Appears in hover transitions (value item top borders, link hover states). Cooler and quieter than gold — signals interactivity in contexts where gold is already in use.
+- **Aqua Pale** (`oklch(93% 0.028 200)`): Tint version for subtle cool warmth.
 
 ### Neutral
 - **Warm Parchment** (`oklch(96.5% 0.009 82)`): The primary page background. Not white. The warm tint is almost imperceptible but its absence is immediately noticed.

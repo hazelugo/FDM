@@ -11,8 +11,8 @@
   --navy-pale: oklch(92% 0.025 248);
   --gold: oklch(67% 0.13 70);
   --gold-pale: oklch(90% 0.055 74);
-  --copper: oklch(57% 0.11 38);
-  --copper-pale: oklch(94% 0.035 38);
+  --aqua: oklch(52% 0.075 200);
+  --aqua-pale: oklch(93% 0.028 200);
   --text: oklch(13% 0.015 82);
   --text-muted: oklch(42% 0.014 82);
   --white: oklch(99% 0.003 82);
@@ -1267,7 +1267,7 @@ h4 {
   border-top-color: var(--gold);
 }
 .value-item:hover {
-  border-top-color: var(--copper);
+  border-top-color: var(--aqua);
 }
 .value-item:first-child:hover {
   border-top-color: var(--gold);
@@ -1552,7 +1552,7 @@ h4 {
   transition: color 0.15s;
 }
 .section-item-link:hover {
-  color: var(--copper);
+  color: var(--aqua);
 }
 
 /* =========================================

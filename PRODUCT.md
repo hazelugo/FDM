@@ -17,7 +17,7 @@ Reliable, calm, loving, traditional, inspiring. The brand should feel like a war
 ### Aesthetic Direction
 **Visual tone**: Editorial warmth. Cinematic photography, large confident serif headings, clean section rhythm, generous breathing room. Minimal clutter — every element earns its place.
 
-**Color palette (established)**: Warm cream backgrounds, deep navy, gold accents, copper highlights — OKLCH-based, tinted neutrals. Light mode only.
+**Color palette (established)**: Warm cream backgrounds, deep navy, gold accents, aqua highlights — OKLCH-based, tinted neutrals. Light mode only.
 
 **Typography (established)**: Cormorant Garamond (display/headings) + DM Sans (body). The pairing of an elegant serif with a clean sans creates the traditional-yet-modern tension the brand needs.
 
