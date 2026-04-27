@@ -1222,13 +1222,17 @@ h4 {
 
 .leader-photo {
   aspect-ratio: 3/4;
-  background: linear-gradient(160deg, var(--navy-pale), oklch(89% 0.03 70));
+  background: linear-gradient(160deg, var(--navy), var(--navy-mid));
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: var(--text-3xl);
-  color: oklch(67% 0.13 70 / 0.4);
+  font-weight: 600;
+  color: oklch(90% 0.055 74);
   font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  outline: 2px solid var(--gold);
+  outline-offset: -6px;
 }
 
 .leader-info {
@@ -1662,21 +1666,30 @@ textarea.form-control {
   line-height: 1.6;
 }
 
-.map-placeholder {
-  margin-top: var(--sp-10);
-  aspect-ratio: 16/9;
-  background: var(--navy-pale);
-  border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  border: 1px dashed var(--cream-border);
+.map-wrap {
+  margin-top: var(--sp-8);
 }
 
-.contact-info .map-placeholder {
-  margin-top: var(--sp-8);
+.map-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--cream-border);
+  display: block;
+}
+
+.map-directions {
+  display: inline-block;
+  margin-top: var(--sp-3);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+.map-directions:hover {
+  color: var(--gold);
 }
 
 .form-privacy-note {
@@ -1684,6 +1697,36 @@ textarea.form-control {
   color: var(--text-muted);
   text-align: center;
   margin-top: var(--sp-4);
+}
+
+.contact-success {
+  padding: var(--sp-16) var(--sp-8);
+  text-align: center;
+}
+.contact-success:focus {
+  outline: none;
+}
+.contact-success-mark {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: var(--sp-6);
+}
+.contact-success h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: var(--sp-4);
+  line-height: 1.1;
+}
+.contact-success p {
+  color: var(--text-muted);
+  max-width: 42ch;
+  margin-inline: auto;
+  margin-bottom: var(--sp-8);
+  line-height: 1.65;
 }
 
 .faq-grid {

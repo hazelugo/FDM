@@ -8,6 +8,18 @@
       name="description"
       content="Comunícate con Fuente de Misericordia. Preguntas, peticiones de oración o simplemente un saludo — te respondemos pronto."
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fuente de Misericordia" />
+    <meta property="og:title" content="Contacto — Fuente de Misericordia" />
+    <meta property="og:description" content="Comunícate con Fuente de Misericordia. Preguntas, peticiones de oración o simplemente un saludo — te respondemos pronto." />
+    <meta property="og:url" content="https://www.fountainofmercy.org/es/contact.html" />
+    <meta property="og:image" content="https://www.fountainofmercy.org/assets/aa/aalogo1.png" />
+    <meta property="og:locale" content="es_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contacto — Fuente de Misericordia" />
+    <meta name="twitter:description" content="Comunícate con Fuente de Misericordia. Preguntas, peticiones de oración o simplemente un saludo — te respondemos pronto." />
+    <meta name="twitter:image" content="https://www.fountainofmercy.org/assets/aa/aalogo1.png" />
+    <link rel="canonical" href="https://www.fountainofmercy.org/es/contact.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +27,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="../assets/icons/icon-192.png" />
     <link rel="alternate" hreflang="en" href="../EN/contact.html" />
     <link rel="alternate" hreflang="es" href="contact.html" />
   </head>
@@ -195,10 +210,17 @@
                   <p class="form-error" id="message-error" hidden></p>
                 </div>
 
+                <input type="hidden" name="_subject" value="Nuevo mensaje — sitio web Fuente de Misericordia" />
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+                <p class="form-error" id="contact-submit-error" hidden role="alert"></p>
+
                 <button
                   type="submit"
                   class="btn btn-primary btn-block btn-padded"
-                  data-sending="¡Mensaje enviado!"
+                  data-sending="Enviando…"
+                  data-error-generic="Algo salió mal. Por favor intenta de nuevo."
+                  data-error-network="No se pudo enviar. Por favor verifica tu conexión e intenta de nuevo."
                 >
                   Enviar Mensaje
                 </button>
@@ -208,6 +230,13 @@
                   terceros.
                 </p>
               </form>
+
+              <div id="contact-success" class="contact-success" hidden tabindex="-1">
+                <p class="contact-success-mark" aria-hidden="true">✦</p>
+                <h3>Mensaje recibido.</h3>
+                <p>Gracias por comunicarte con nosotros. Leemos cada mensaje y nos pondremos en contacto contigo pronto. Esperamos conectar contigo.</p>
+                <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+              </div>
             </div>
 
             <!-- INFORMACIÓN DE CONTACTO -->
@@ -272,8 +301,21 @@
                 </div>
               </div>
 
-              <div class="map-placeholder" aria-label="Mapa de ubicación">
-                [ Mapa Aquí ]
+              <div class="map-wrap">
+                <iframe
+                  class="map-embed"
+                  src="https://maps.google.com/maps?q=605+Leal%27s+Dr,+Mission,+TX+78572&output=embed&z=15"
+                  title="Mapa de ubicación de Fuente de Misericordia"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen
+                ></iframe>
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=605+Leal%27s+Dr,+Mission,+TX+78572"
+                  class="map-directions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Cómo llegar</a>
               </div>
             </div>
           </div>
@@ -398,9 +440,9 @@
           <div class="footer-col">
             <h4>Conéctate</h4>
             <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">YouTube</a></li>
+              <li><a href="https://www.facebook.com/fdmpalmview" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+              <li><a href="https://www.instagram.com/fdmpalmview" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a href="https://www.youtube.com/@fdmpalmview" target="_blank" rel="noopener noreferrer">YouTube</a></li>
               <li><a href="contact.html">Envíanos un Mensaje</a></li>
             </ul>
           </div>

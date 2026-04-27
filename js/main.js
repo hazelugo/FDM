@@ -201,27 +201,50 @@ if (contactForm) {
     return firstError;
   };
 
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const firstError = validate();
     if (firstError) { firstError.focus(); return; }
 
-    const btn = contactForm.querySelector('[type="submit"]');
-    const original = btn.textContent;
-    btn.textContent = btn.dataset.sending || 'Message Sent!';
-    btn.disabled = true;
+    const btn       = contactForm.querySelector('[type="submit"]');
+    const submitErr = document.getElementById('contact-submit-error');
+    const successEl = document.getElementById('contact-success');
+    const original  = btn.textContent.trim();
 
-    setTimeout(() => {
+    btn.textContent = btn.dataset.sending || 'Sending…';
+    btn.disabled = true;
+    if (submitErr) submitErr.hidden = true;
+
+    try {
+      const res = await fetch('https://formspree.io/f/xpqkelaj', {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        if (successEl) {
+          contactForm.hidden = true;
+          successEl.hidden = false;
+          successEl.focus();
+        }
+      } else {
+        const data = await res.json().catch(() => ({}));
+        if (submitErr) {
+          submitErr.textContent = data.error || btn.dataset.errorGeneric || 'Something went wrong. Please try again.';
+          submitErr.hidden = false;
+        }
+        btn.textContent = original;
+        btn.disabled = false;
+      }
+    } catch {
+      if (submitErr) {
+        submitErr.textContent = btn.dataset.errorNetwork || 'Unable to send. Please check your connection and try again.';
+        submitErr.hidden = false;
+      }
       btn.textContent = original;
       btn.disabled = false;
-      contactForm.reset();
-      contactForm.querySelectorAll('[aria-invalid]').forEach(el => {
-        el.removeAttribute('aria-invalid');
-      });
-      contactForm.querySelectorAll('.form-error').forEach(el => {
-        el.hidden = true;
-      });
-    }, 3000);
+    }
   });
 }
 

@@ -8,6 +8,18 @@
       name="description"
       content="Reach out to Fountain of Mercy. We'd love to hear from you — questions, prayer requests, or just saying hello."
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fountain of Mercy" />
+    <meta property="og:title" content="Contact — Fountain of Mercy" />
+    <meta property="og:description" content="Reach out to Fountain of Mercy. We'd love to hear from you — questions, prayer requests, or just saying hello." />
+    <meta property="og:url" content="https://www.fountainofmercy.org/en/contact.html" />
+    <meta property="og:image" content="https://www.fountainofmercy.org/assets/aa/aalogo1.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact — Fountain of Mercy" />
+    <meta name="twitter:description" content="Reach out to Fountain of Mercy. We'd love to hear from you — questions, prayer requests, or just saying hello." />
+    <meta name="twitter:image" content="https://www.fountainofmercy.org/assets/aa/aalogo1.png" />
+    <link rel="canonical" href="https://www.fountainofmercy.org/en/contact.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +27,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="../assets/icons/icon-192.png" />
     <link rel="alternate" hreflang="en" href="contact.html" />
     <link rel="alternate" hreflang="es" href="../es/contact.html" />
   </head>
@@ -192,10 +207,17 @@
                   <p class="form-error" id="message-error" hidden></p>
                 </div>
 
+                <input type="hidden" name="_subject" value="New message — Fountain of Mercy website" />
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+                <p class="form-error" id="contact-submit-error" hidden role="alert"></p>
+
                 <button
                   type="submit"
                   class="btn btn-primary btn-block btn-padded"
                   data-sending="Sending…"
+                  data-error-generic="Something went wrong. Please try again."
+                  data-error-network="Unable to send. Please check your connection and try again."
                 >
                   Send Message
                 </button>
@@ -204,6 +226,13 @@
                   We respect your privacy. Your information is never shared.
                 </p>
               </form>
+
+              <div id="contact-success" class="contact-success" hidden tabindex="-1">
+                <p class="contact-success-mark" aria-hidden="true">✦</p>
+                <h3>Message received.</h3>
+                <p>Thank you for reaching out. We read every message and will get back to you soon. We look forward to connecting with you.</p>
+                <a href="index.html" class="btn btn-primary">Back to Home</a>
+              </div>
             </div>
 
             <!-- SIDEBAR INFO -->
@@ -257,14 +286,27 @@
                     <p class="contact-social-links">
                       <a href="https://www.facebook.com/fdmpalmview">Facebook</a>
                       <a href="https://www.instagram.com/fdmpalmview/">Instagram</a>
-                      <a href="https://www.youtube.com/@FDMPalmview">YouTube</a>
+                      <a href="https://www.youtube.com/@fdmpalmview">YouTube</a>
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div class="map-placeholder" aria-label="Map placeholder">
-                [ Map Embed Here ]
+              <div class="map-wrap">
+                <iframe
+                  class="map-embed"
+                  src="https://maps.google.com/maps?q=605+Leal%27s+Dr,+Mission,+TX+78572&output=embed&z=15"
+                  title="Fountain of Mercy location map"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen
+                ></iframe>
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=605+Leal%27s+Dr,+Mission,+TX+78572"
+                  class="map-directions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Get Directions</a>
               </div>
             </div>
           </div>
