@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(node *)",
-      "Skill(gsd-audit-uat)"
+      "Skill(gsd-audit-uat)",
+      "PowerShell($bytes = [System.IO.File]::ReadAllBytes\\(\"C:\\\\Users\\\\Hector\\\\Documents\\\\FDM\\\\assets\\\\icons\\\\favicon.ico\"\\); \"File size: $\\($bytes.Length\\) bytes\"; $width = [BitConverter]::ToInt16\\($bytes, 6\\); $height = [BitConverter]::ToInt16\\($bytes, 8\\); \"First frame dimensions: ${width}x${height}\")",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\Hector\\\\Documents\\\\FDM\\\\assets\\\\icons\\\\icon-192.png\"\\); \"Width: $\\($img.Width\\), Height: $\\($img.Height\\)\"; $img.Dispose\\(\\))"
     ]
   }
 }

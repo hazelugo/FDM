@@ -43,7 +43,7 @@
           class="nav-logo"
           aria-label="Fountain of Mercy home"
         >
-          <img src="../assets/aa/aalogo1.png" alt="" class="nav-logo-img" />
+          <img src="../assets/aa/aalogo1.png" alt="Fountain of Mercy" class="nav-logo-img" />
           <span class="nav-logo-text">Fountain of Mercy</span>
         </a>
         <button
@@ -309,12 +309,21 @@
                 </div>
               </div>
             </div>
-            <div
-              class="map-placeholder animate-fade"
-              data-delay="2"
-              aria-label="Map of our location"
-            >
-              [ Map Embed Here ]
+            <div class="map-wrap animate-fade" data-delay="2">
+              <iframe
+                class="map-embed"
+                src="https://maps.google.com/maps?q=605+Leal%27s+Dr,+Mission,+TX+78572&output=embed&z=15"
+                title="Fountain of Mercy location map"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=605+Leal%27s+Dr,+Mission,+TX+78572"
+                class="map-directions"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Get directions</a>
             </div>
           </div>
         </div>
