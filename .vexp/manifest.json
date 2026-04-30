@@ -1,0 +1,14 @@
+{
+  "file_hashes": {
+    "js/main.js": "80caa0041cea1dfb2d9857c20b2eef401eba1e95b5a0f1c5606480b1ffc30fff"
+  },
+  "indexed_at_commit": "9256b2a994e6e69435b9735189b78a32aad61152",
+  "indexed_at_timestamp": "2026-04-30T14:27:22.495323+00:00",
+  "schema_version": 3,
+  "stats": {
+    "total_edges": 5,
+    "total_files": 1,
+    "total_nodes": 11
+  },
+  "vexp_version": "2.0.12"
+}
